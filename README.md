@@ -1,3 +1,3 @@
 
-To compile, type make at the $ prompt<b>
+To compile, type make at the $ prompt<br>
 $ make
