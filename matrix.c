@@ -47,7 +47,7 @@ matrix_t* matrix_new(int columns, int rows)
 
 /**
 Delete a matrix. 
-- Matrices can be created with other functions than matrix_new.
+- Matrices can be created with other functions than matrix_new().
 - If the called function returns a pointer to a matrix_t, that matrix must be deleted with this destructor function.
 **/
 void matrix_del(matrix_t* m)
@@ -60,7 +60,7 @@ void matrix_del(matrix_t* m)
 
 /**
 	Extract a column vector from a matrix.
-	- Must be deleted with matrix_del().
+	- The result must be deleted with matrix_del().
 **/
 matrix_t* matrix_get_col_vector(matrix_t* m, int col_no){
 	int i;
@@ -132,6 +132,7 @@ void matrix_printf(char* format, matrix_t* m){
 
 /**
 Rotate a matrix left (anticlockwise) in 2 dmensions using radians.
+- The result must be deleted with matrix_del():
 **/
 matrix_t* matrix_rol2r(matrix_t* m, double theta){
 	matrix_t* rv;
@@ -148,6 +149,7 @@ matrix_t* matrix_rol2r(matrix_t* m, double theta){
 /**
 multiply m1 x m2
 - This function is used as a 'workhorse' for kinematic functions.
+- The result must be deleted with matrix_del():
 **/
 matrix_t* matrix_mul(matrix_t* m1, matrix_t* m2)
 {
