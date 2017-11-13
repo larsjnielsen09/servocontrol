@@ -1,0 +1,134 @@
+.TH "matrix.c" 3 "Mon Nov 13 2017" "Servocontrol" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+matrix.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdarg\&.h>\fP
+.br
+\fC#include <assert\&.h>\fP
+.br
+\fC#include <math\&.h>\fP
+.br
+\fC#include 'matrix\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBmatrix_t\fP * \fBmatrix_new\fP (int columns, int rows)"
+.br
+.RI "\fICreate a new matrix\&. \fP"
+.ti -1c
+.RI "void \fBmatrix_del\fP (\fBmatrix_t\fP *m)"
+.br
+.RI "\fIDelete a matrix\&. \fP"
+.ti -1c
+.RI "\fBmatrix_t\fP * \fBmatrix_get_col_vector\fP (\fBmatrix_t\fP *m, int col_no)"
+.br
+.RI "\fIExtract a column vector from a matrix\&. \fP"
+.ti -1c
+.RI "void \fBmatrix_set_col\fP (\fBmatrix_t\fP *m, int col_no,\&.\&.\&.)"
+.br
+.RI "\fISet the column col_no in m\&. \fP"
+.ti -1c
+.RI "void \fBmatrix_set\fP (\fBmatrix_t\fP *m, int col, int row, double d)"
+.br
+.RI "\fISet the element at column col and row row in m to d\&. \fP"
+.ti -1c
+.RI "double * \fBmatrix_get\fP (\fBmatrix_t\fP *m, int col, int row)"
+.br
+.RI "\fIReturn a pointer to the element at col, row in m\&. \fP"
+.ti -1c
+.RI "void \fBmatrix_printf\fP (char *format, \fBmatrix_t\fP *m)"
+.br
+.RI "\fIPrint the contents of matrix m using format\&. \fP"
+.ti -1c
+.RI "\fBmatrix_t\fP * \fBmatrix_rol2r\fP (\fBmatrix_t\fP *m, double theta)"
+.br
+.RI "\fIRotate a matrix left (anticlockwise) in 2 dmensions using radians\&. \fP"
+.ti -1c
+.RI "\fBmatrix_t\fP * \fBmatrix_mul\fP (\fBmatrix_t\fP *m1, \fBmatrix_t\fP *m2)"
+.br
+.RI "\fImultiply m1 x m2 \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void matrix_del (\fBmatrix_t\fP * m)"
+
+.PP
+Delete a matrix\&. 
+.IP "\(bu" 2
+Matrices can be created with other functions than matrix_new\&.
+.IP "\(bu" 2
+If the called function returns a pointer to a matrix_t, that matrix must be deleted with this destructor function\&. 
+.PP
+
+.SS "double* matrix_get (\fBmatrix_t\fP * m, int col, int row)"
+
+.PP
+Return a pointer to the element at col, row in m\&. 
+.IP "\(bu" 2
+The array containing this element is maintained by matrix_t, so don't try to delete this\&. 
+.PP
+
+.SS "\fBmatrix_t\fP* matrix_get_col_vector (\fBmatrix_t\fP * m, int col_no)"
+
+.PP
+Extract a column vector from a matrix\&. 
+.IP "\(bu" 2
+Must be deleted with \fBmatrix_del()\fP\&. 
+.PP
+
+.SS "\fBmatrix_t\fP* matrix_mul (\fBmatrix_t\fP * m1, \fBmatrix_t\fP * m2)"
+
+.PP
+multiply m1 x m2 
+.IP "\(bu" 2
+This function is used as a 'workhorse' for kinematic functions\&. 
+.PP
+
+.SS "\fBmatrix_t\fP* matrix_new (int columns, int rows)"
+
+.PP
+Create a new matrix\&. 
+.IP "\(bu" 2
+Must be deleted with \fBmatrix_del()\fP\&. 
+.PP
+
+.SS "void matrix_printf (char * format, \fBmatrix_t\fP * m)"
+
+.PP
+Print the contents of matrix m using format\&. 
+.IP "\(bu" 2
+Typically, you'd use '%2\&.1f ' (note the space)\&. 
+.PP
+
+.SS "\fBmatrix_t\fP* matrix_rol2r (\fBmatrix_t\fP * m, double theta)"
+
+.PP
+Rotate a matrix left (anticlockwise) in 2 dmensions using radians\&. 
+.SS "void matrix_set (\fBmatrix_t\fP * m, int col, int row, double d)"
+
+.PP
+Set the element at column col and row row in m to d\&. -Same as ELM the macro hack, but a lot safer\&. 
+.SS "void matrix_set_col (\fBmatrix_t\fP * m, int col_no,  \&.\&.\&.)"
+
+.PP
+Set the column col_no in m\&. 
+.IP "\(bu" 2
+The argument list must contain one entry for each rown in m\&.
+.IP "\(bu" 2
+There is no way to check this without cluttering up the code\&. 
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Servocontrol from the source code\&.

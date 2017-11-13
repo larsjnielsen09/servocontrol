@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="matrix_8c">
+    <title>matrix.c File Reference</title>
+    <programlisting>#include &lt;stdio.h&gt;</programlisting>
+    <programlisting>#include &lt;stdlib.h&gt;</programlisting>
+    <programlisting>#include &lt;stdarg.h&gt;</programlisting>
+    <programlisting>#include &lt;assert.h&gt;</programlisting>
+    <programlisting>#include &lt;math.h&gt;</programlisting>
+    <programlisting>#include &quot;matrix.h&quot;</programlisting>
+<para>Include dependency diagram for matrix.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="matrix_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for matrix.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="matrix_8c__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * <link linkend="matrix_8c_1ada5cab59dea5fc74a2146285abf2e468">matrix_new</link> (
+int columns, int rows)<para><emphasis>Create a new matrix.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="matrix_8c_1a8277c0c702668ac9c20d5b4fbbb1c805">matrix_del</link> (
+<link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * m)<para><emphasis>Delete a matrix.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * <link linkend="matrix_8c_1a734238400aafc2b5dbc5cd3d56cd9d60">matrix_get_col_vector</link> (
+<link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * m, int col_no)<para><emphasis>Extract a column vector from a matrix.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="matrix_8c_1a2bf3c116d7c23979b805934c18d9d3fd">matrix_set_col</link> (
+<link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * m, int col_no, ... )<para><emphasis>Set the column col_no in m.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="matrix_8c_1a066269f1cf8e31cee35781be055b541f">matrix_set</link> (
+<link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * m, int col, int row, double d)<para><emphasis>Set the element at column col and row row in m to d.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double * <link linkend="matrix_8c_1ae6a0f841c360812a20dd2f43a7be3d9e">matrix_get</link> (
+<link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * m, int col, int row)<para><emphasis>Return a pointer to the element at col, row in m.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="matrix_8c_1a57c33c823cc314048ff5ffd206a7fd27">matrix_printf</link> (
+char * format, <link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * m)<para><emphasis>Print the contents of matrix m using format.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * <link linkend="matrix_8c_1af1e14df979d46d4f11464f83f4e6ee22">matrix_rol2r</link> (
+<link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * m, double theta)<para><emphasis>Rotate a matrix left (anticlockwise) in 2 dmensions using radians.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * <link linkend="matrix_8c_1a1e8d8c0421f716763d5bbb5c39af0e5b">matrix_mul</link> (
+<link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * m1, <link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * m2)<para><emphasis>multiply m1 x m2</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /home/atle/projects/servocontrol/matrix.c</para>
+    </simplesect>
+</section>

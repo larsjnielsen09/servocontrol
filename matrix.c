@@ -24,7 +24,10 @@
 #include <math.h>
 #include "matrix.h"
 
-
+/**
+Create a new matrix.
+- Must be deleted with matrix_del().
+**/
 matrix_t* matrix_new(int columns, int rows)
 {
 	matrix_t* rv = malloc(sizeof(matrix_t));
@@ -42,6 +45,11 @@ matrix_t* matrix_new(int columns, int rows)
 	return rv;						 
 }
 
+/**
+Delete a matrix. 
+- Matrices can be created with other functions than matrix_new.
+- If the called function returns a pointer to a matrix_t, that matrix must be deleted with this destructor function.
+**/
 void matrix_del(matrix_t* m)
 {
 	assert(m);
@@ -50,11 +58,10 @@ void matrix_del(matrix_t* m)
 	free(m);
 }
 
-/*
-	Extract a column vector from a matrix
-	Yes, I know it returns a vector.
-	My point is: Whatever you call it, don't forget to free it after use!
-*/
+/**
+	Extract a column vector from a matrix.
+	- Must be deleted with matrix_del().
+**/
 matrix_t* matrix_get_col_vector(matrix_t* m, int col_no){
 	int i;
 	
@@ -67,7 +74,11 @@ matrix_t* matrix_get_col_vector(matrix_t* m, int col_no){
 	return rv;
 }
 
-
+/**
+Set the column col_no in m.
+- The argument list must contain one entry for each rown in m.
+- There is no way to check this without cluttering up the code.
+*/
 void matrix_set_col(matrix_t* m, int col_no, ...)
 {
     va_list ap;
@@ -82,8 +93,9 @@ void matrix_set_col(matrix_t* m, int col_no, ...)
     va_end(ap);
 }
 
-/*
-Same as ELM, but a lot safer.
+/**
+Set the element at column col and row row in m to d.
+-Same as ELM the macro hack, but a lot safer.
 */
 void matrix_set(matrix_t* m, int col, int row, double d){
 	assert(col<m->ncols);
@@ -91,6 +103,10 @@ void matrix_set(matrix_t* m, int col, int row, double d){
 	m->v[(m->ncols*row) + col] = d;
 }
 
+/**
+Return a pointer to the element at col, row in m.
+- The array containing this element is maintained by matrix_t, so don't try to delete this.
+**/
 double* matrix_get(matrix_t* m, int col, int row){
 	assert(col<m->ncols);
 	assert(row<m->nrows);
@@ -98,6 +114,10 @@ double* matrix_get(matrix_t* m, int col, int row){
 }
 
 
+/**
+Print the contents of matrix m using format.
+- Typically, you'd use "%2.1f " (note the space).
+**/
 void matrix_printf(char* format, matrix_t* m){
 	int i,j;
 	
@@ -110,6 +130,9 @@ void matrix_printf(char* format, matrix_t* m){
 	}
 }
 
+/**
+Rotate a matrix left (anticlockwise) in 2 dmensions using radians.
+**/
 matrix_t* matrix_rol2r(matrix_t* m, double theta){
 	matrix_t* rv;
 	matrix_t* rm; // Return value, rotation matrix
@@ -122,7 +145,10 @@ matrix_t* matrix_rol2r(matrix_t* m, double theta){
 }
 
 
-
+/**
+multiply m1 x m2
+- This function is used as a 'workhorse' for kinematic functions.
+**/
 matrix_t* matrix_mul(matrix_t* m1, matrix_t* m2)
 {
 	int row, col;

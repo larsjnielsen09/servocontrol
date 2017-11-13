@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="servoctl_8h" kind="file" language="C++">
+    <compoundname>servoctl.h</compoundname>
+    <includedby refid="main_8c" local="yes">main.c</includedby>
+    <includedby refid="servocontrol_8c" local="yes">servocontrol.c</includedby>
+    <invincdepgraph>
+      <node id="69">
+        <label>servocontrol.c</label>
+        <link refid="servocontrol_8c"/>
+      </node>
+      <node id="67">
+        <label>servoctl.h</label>
+        <link refid="servoctl.h"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>main.c</label>
+        <link refid="main_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="servoctl_8h_1ae7a46562f652d66a307a5644f4cd64d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double *</type>
+        <definition>double* interpolate</definition>
+        <argsstring>(double p0, double p1, int numsteps)</argsstring>
+        <name>interpolate</name>
+        <param>
+          <type>double</type>
+          <declname>p0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numsteps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="servoctl.h" line="2" column="1" bodyfile="servoctl.c" bodystart="11" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/><ref refid="servoctl_8h_1ae7a46562f652d66a307a5644f4cd64d5" kindref="member">interpolate</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numsteps);</highlight></codeline>
+    </programlisting>
+    <location file="servoctl.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,175 @@
+\hypertarget{matrix_8c}{}\section{matrix.\+c File Reference}
+\label{matrix_8c}\index{matrix.\+c@{matrix.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdarg.\+h$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}matrix.\+h\char`\"{}}\\*
+Include dependency graph for matrix.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrix_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$ \hyperlink{matrix_8c_ada5cab59dea5fc74a2146285abf2e468}{matrix\+\_\+new} (int columns, int rows)
+\begin{DoxyCompactList}\small\item\em Create a new matrix. \end{DoxyCompactList}\item 
+void \hyperlink{matrix_8c_a8277c0c702668ac9c20d5b4fbbb1c805}{matrix\+\_\+del} (\hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$m)
+\begin{DoxyCompactList}\small\item\em Delete a matrix. \end{DoxyCompactList}\item 
+\hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$ \hyperlink{matrix_8c_a734238400aafc2b5dbc5cd3d56cd9d60}{matrix\+\_\+get\+\_\+col\+\_\+vector} (\hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$m, int col\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Extract a column vector from a matrix. \end{DoxyCompactList}\item 
+void \hyperlink{matrix_8c_a2bf3c116d7c23979b805934c18d9d3fd}{matrix\+\_\+set\+\_\+col} (\hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$m, int col\+\_\+no,...)
+\begin{DoxyCompactList}\small\item\em Set the column col\+\_\+no in m. \end{DoxyCompactList}\item 
+void \hyperlink{matrix_8c_a066269f1cf8e31cee35781be055b541f}{matrix\+\_\+set} (\hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$m, int col, int row, double d)
+\begin{DoxyCompactList}\small\item\em Set the element at column col and row row in m to d. \end{DoxyCompactList}\item 
+double $\ast$ \hyperlink{matrix_8c_ae6a0f841c360812a20dd2f43a7be3d9e}{matrix\+\_\+get} (\hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$m, int col, int row)
+\begin{DoxyCompactList}\small\item\em Return a pointer to the element at col, row in m. \end{DoxyCompactList}\item 
+void \hyperlink{matrix_8c_a57c33c823cc314048ff5ffd206a7fd27}{matrix\+\_\+printf} (char $\ast$format, \hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$m)
+\begin{DoxyCompactList}\small\item\em Print the contents of matrix m using format. \end{DoxyCompactList}\item 
+\hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$ \hyperlink{matrix_8c_af1e14df979d46d4f11464f83f4e6ee22}{matrix\+\_\+rol2r} (\hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$m, double theta)
+\begin{DoxyCompactList}\small\item\em Rotate a matrix left (anticlockwise) in 2 dmensions using radians. \end{DoxyCompactList}\item 
+\hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$ \hyperlink{matrix_8c_a1e8d8c0421f716763d5bbb5c39af0e5b}{matrix\+\_\+mul} (\hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$m1, \hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$m2)
+\begin{DoxyCompactList}\small\item\em multiply m1 x m2 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{matrix.\+c@{matrix.\+c}!matrix\+\_\+del@{matrix\+\_\+del}}
+\index{matrix\+\_\+del@{matrix\+\_\+del}!matrix.\+c@{matrix.\+c}}
+\subsubsection[{\texorpdfstring{matrix\+\_\+del(matrix\+\_\+t $\ast$m)}{matrix_del(matrix_t *m)}}]{\setlength{\rightskip}{0pt plus 5cm}void matrix\+\_\+del (
+\begin{DoxyParamCaption}
+\item[{{\bf matrix\+\_\+t} $\ast$}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{matrix_8c_a8277c0c702668ac9c20d5b4fbbb1c805}{}\label{matrix_8c_a8277c0c702668ac9c20d5b4fbbb1c805}
+
+
+Delete a matrix. 
+
+
+\begin{DoxyItemize}
+\item Matrices can be created with other functions than matrix\+\_\+new.
+\item If the called function returns a pointer to a matrix\+\_\+t, that matrix must be deleted with this destructor function. 
+\end{DoxyItemize}\index{matrix.\+c@{matrix.\+c}!matrix\+\_\+get@{matrix\+\_\+get}}
+\index{matrix\+\_\+get@{matrix\+\_\+get}!matrix.\+c@{matrix.\+c}}
+\subsubsection[{\texorpdfstring{matrix\+\_\+get(matrix\+\_\+t $\ast$m, int col, int row)}{matrix_get(matrix_t *m, int col, int row)}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ matrix\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf matrix\+\_\+t} $\ast$}]{m, }
+\item[{int}]{col, }
+\item[{int}]{row}
+\end{DoxyParamCaption}
+)}\hypertarget{matrix_8c_ae6a0f841c360812a20dd2f43a7be3d9e}{}\label{matrix_8c_ae6a0f841c360812a20dd2f43a7be3d9e}
+
+
+Return a pointer to the element at col, row in m. 
+
+
+\begin{DoxyItemize}
+\item The array containing this element is maintained by matrix\+\_\+t, so don\textquotesingle{}t try to delete this. 
+\end{DoxyItemize}\index{matrix.\+c@{matrix.\+c}!matrix\+\_\+get\+\_\+col\+\_\+vector@{matrix\+\_\+get\+\_\+col\+\_\+vector}}
+\index{matrix\+\_\+get\+\_\+col\+\_\+vector@{matrix\+\_\+get\+\_\+col\+\_\+vector}!matrix.\+c@{matrix.\+c}}
+\subsubsection[{\texorpdfstring{matrix\+\_\+get\+\_\+col\+\_\+vector(matrix\+\_\+t $\ast$m, int col\+\_\+no)}{matrix_get_col_vector(matrix_t *m, int col_no)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf matrix\+\_\+t}$\ast$ matrix\+\_\+get\+\_\+col\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{{\bf matrix\+\_\+t} $\ast$}]{m, }
+\item[{int}]{col\+\_\+no}
+\end{DoxyParamCaption}
+)}\hypertarget{matrix_8c_a734238400aafc2b5dbc5cd3d56cd9d60}{}\label{matrix_8c_a734238400aafc2b5dbc5cd3d56cd9d60}
+
+
+Extract a column vector from a matrix. 
+
+
+\begin{DoxyItemize}
+\item Must be deleted with \hyperlink{matrix_8c_a8277c0c702668ac9c20d5b4fbbb1c805}{matrix\+\_\+del()}. 
+\end{DoxyItemize}\index{matrix.\+c@{matrix.\+c}!matrix\+\_\+mul@{matrix\+\_\+mul}}
+\index{matrix\+\_\+mul@{matrix\+\_\+mul}!matrix.\+c@{matrix.\+c}}
+\subsubsection[{\texorpdfstring{matrix\+\_\+mul(matrix\+\_\+t $\ast$m1, matrix\+\_\+t $\ast$m2)}{matrix_mul(matrix_t *m1, matrix_t *m2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf matrix\+\_\+t}$\ast$ matrix\+\_\+mul (
+\begin{DoxyParamCaption}
+\item[{{\bf matrix\+\_\+t} $\ast$}]{m1, }
+\item[{{\bf matrix\+\_\+t} $\ast$}]{m2}
+\end{DoxyParamCaption}
+)}\hypertarget{matrix_8c_a1e8d8c0421f716763d5bbb5c39af0e5b}{}\label{matrix_8c_a1e8d8c0421f716763d5bbb5c39af0e5b}
+
+
+multiply m1 x m2 
+
+
+\begin{DoxyItemize}
+\item This function is used as a \textquotesingle{}workhorse\textquotesingle{} for kinematic functions. 
+\end{DoxyItemize}\index{matrix.\+c@{matrix.\+c}!matrix\+\_\+new@{matrix\+\_\+new}}
+\index{matrix\+\_\+new@{matrix\+\_\+new}!matrix.\+c@{matrix.\+c}}
+\subsubsection[{\texorpdfstring{matrix\+\_\+new(int columns, int rows)}{matrix_new(int columns, int rows)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf matrix\+\_\+t}$\ast$ matrix\+\_\+new (
+\begin{DoxyParamCaption}
+\item[{int}]{columns, }
+\item[{int}]{rows}
+\end{DoxyParamCaption}
+)}\hypertarget{matrix_8c_ada5cab59dea5fc74a2146285abf2e468}{}\label{matrix_8c_ada5cab59dea5fc74a2146285abf2e468}
+
+
+Create a new matrix. 
+
+
+\begin{DoxyItemize}
+\item Must be deleted with \hyperlink{matrix_8c_a8277c0c702668ac9c20d5b4fbbb1c805}{matrix\+\_\+del()}. 
+\end{DoxyItemize}\index{matrix.\+c@{matrix.\+c}!matrix\+\_\+printf@{matrix\+\_\+printf}}
+\index{matrix\+\_\+printf@{matrix\+\_\+printf}!matrix.\+c@{matrix.\+c}}
+\subsubsection[{\texorpdfstring{matrix\+\_\+printf(char $\ast$format, matrix\+\_\+t $\ast$m)}{matrix_printf(char *format, matrix_t *m)}}]{\setlength{\rightskip}{0pt plus 5cm}void matrix\+\_\+printf (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{format, }
+\item[{{\bf matrix\+\_\+t} $\ast$}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{matrix_8c_a57c33c823cc314048ff5ffd206a7fd27}{}\label{matrix_8c_a57c33c823cc314048ff5ffd206a7fd27}
+
+
+Print the contents of matrix m using format. 
+
+
+\begin{DoxyItemize}
+\item Typically, you\textquotesingle{}d use \char`\"{}\%2.\+1f \char`\"{} (note the space). 
+\end{DoxyItemize}\index{matrix.\+c@{matrix.\+c}!matrix\+\_\+rol2r@{matrix\+\_\+rol2r}}
+\index{matrix\+\_\+rol2r@{matrix\+\_\+rol2r}!matrix.\+c@{matrix.\+c}}
+\subsubsection[{\texorpdfstring{matrix\+\_\+rol2r(matrix\+\_\+t $\ast$m, double theta)}{matrix_rol2r(matrix_t *m, double theta)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf matrix\+\_\+t}$\ast$ matrix\+\_\+rol2r (
+\begin{DoxyParamCaption}
+\item[{{\bf matrix\+\_\+t} $\ast$}]{m, }
+\item[{double}]{theta}
+\end{DoxyParamCaption}
+)}\hypertarget{matrix_8c_af1e14df979d46d4f11464f83f4e6ee22}{}\label{matrix_8c_af1e14df979d46d4f11464f83f4e6ee22}
+
+
+Rotate a matrix left (anticlockwise) in 2 dmensions using radians. 
+
+\index{matrix.\+c@{matrix.\+c}!matrix\+\_\+set@{matrix\+\_\+set}}
+\index{matrix\+\_\+set@{matrix\+\_\+set}!matrix.\+c@{matrix.\+c}}
+\subsubsection[{\texorpdfstring{matrix\+\_\+set(matrix\+\_\+t $\ast$m, int col, int row, double d)}{matrix_set(matrix_t *m, int col, int row, double d)}}]{\setlength{\rightskip}{0pt plus 5cm}void matrix\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf matrix\+\_\+t} $\ast$}]{m, }
+\item[{int}]{col, }
+\item[{int}]{row, }
+\item[{double}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{matrix_8c_a066269f1cf8e31cee35781be055b541f}{}\label{matrix_8c_a066269f1cf8e31cee35781be055b541f}
+
+
+Set the element at column col and row row in m to d. 
+
+-\/\+Same as E\+LM the macro hack, but a lot safer. \index{matrix.\+c@{matrix.\+c}!matrix\+\_\+set\+\_\+col@{matrix\+\_\+set\+\_\+col}}
+\index{matrix\+\_\+set\+\_\+col@{matrix\+\_\+set\+\_\+col}!matrix.\+c@{matrix.\+c}}
+\subsubsection[{\texorpdfstring{matrix\+\_\+set\+\_\+col(matrix\+\_\+t $\ast$m, int col\+\_\+no,...)}{matrix_set_col(matrix_t *m, int col_no,...)}}]{\setlength{\rightskip}{0pt plus 5cm}void matrix\+\_\+set\+\_\+col (
+\begin{DoxyParamCaption}
+\item[{{\bf matrix\+\_\+t} $\ast$}]{m, }
+\item[{int}]{col\+\_\+no, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{matrix_8c_a2bf3c116d7c23979b805934c18d9d3fd}{}\label{matrix_8c_a2bf3c116d7c23979b805934c18d9d3fd}
+
+
+Set the column col\+\_\+no in m. 
+
+
+\begin{DoxyItemize}
+\item The argument list must contain one entry for each rown in m.
+\item There is no way to check this without cluttering up the code. 
+\end{DoxyItemize}

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.11">
+  <compound refid="structmatrix" kind="struct"><name>matrix</name>
+    <member refid="structmatrix_1a53e53380c64d2dcc85486da7f90794d5" kind="variable"><name>nrows</name></member>
+    <member refid="structmatrix_1a7c4b990ebe8d2c098f3974f6ffe0c9b4" kind="variable"><name>ncols</name></member>
+    <member refid="structmatrix_1a18edff6f6f8cc7071adfd9bc826378ef" kind="variable"><name>v</name></member>
+  </compound>
+  <compound refid="main_8c" kind="file"><name>main.c</name>
+    <member refid="main_8c_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="matrix_8c" kind="file"><name>matrix.c</name>
+    <member refid="matrix_8c_1ada5cab59dea5fc74a2146285abf2e468" kind="function"><name>matrix_new</name></member>
+    <member refid="matrix_8c_1a8277c0c702668ac9c20d5b4fbbb1c805" kind="function"><name>matrix_del</name></member>
+    <member refid="matrix_8c_1a734238400aafc2b5dbc5cd3d56cd9d60" kind="function"><name>matrix_get_col_vector</name></member>
+    <member refid="matrix_8c_1a2bf3c116d7c23979b805934c18d9d3fd" kind="function"><name>matrix_set_col</name></member>
+    <member refid="matrix_8c_1a066269f1cf8e31cee35781be055b541f" kind="function"><name>matrix_set</name></member>
+    <member refid="matrix_8c_1ae6a0f841c360812a20dd2f43a7be3d9e" kind="function"><name>matrix_get</name></member>
+    <member refid="matrix_8c_1a57c33c823cc314048ff5ffd206a7fd27" kind="function"><name>matrix_printf</name></member>
+    <member refid="matrix_8c_1af1e14df979d46d4f11464f83f4e6ee22" kind="function"><name>matrix_rol2r</name></member>
+    <member refid="matrix_8c_1a1e8d8c0421f716763d5bbb5c39af0e5b" kind="function"><name>matrix_mul</name></member>
+  </compound>
+  <compound refid="matrix_8h" kind="file"><name>matrix.h</name>
+    <member refid="matrix_8h_1aaf4919968b31b42a399d749719bbe126" kind="define"><name>ELM</name></member>
+    <member refid="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f" kind="typedef"><name>matrix_t</name></member>
+    <member refid="matrix_8h_1ada5cab59dea5fc74a2146285abf2e468" kind="function"><name>matrix_new</name></member>
+    <member refid="matrix_8h_1a8277c0c702668ac9c20d5b4fbbb1c805" kind="function"><name>matrix_del</name></member>
+    <member refid="matrix_8h_1a734238400aafc2b5dbc5cd3d56cd9d60" kind="function"><name>matrix_get_col_vector</name></member>
+    <member refid="matrix_8h_1a2bf3c116d7c23979b805934c18d9d3fd" kind="function"><name>matrix_set_col</name></member>
+    <member refid="matrix_8h_1a1e8d8c0421f716763d5bbb5c39af0e5b" kind="function"><name>matrix_mul</name></member>
+    <member refid="matrix_8h_1a6e2e142638d18a26b372e1fe1ad719f4" kind="function"><name>matrix_set</name></member>
+    <member refid="matrix_8h_1ae6a0f841c360812a20dd2f43a7be3d9e" kind="function"><name>matrix_get</name></member>
+    <member refid="matrix_8h_1a57c33c823cc314048ff5ffd206a7fd27" kind="function"><name>matrix_printf</name></member>
+    <member refid="matrix_8h_1af1e14df979d46d4f11464f83f4e6ee22" kind="function"><name>matrix_rol2r</name></member>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="servocontrol_8c" kind="file"><name>servocontrol.c</name>
+    <member refid="servocontrol_8c_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="servoctl_8c" kind="file"><name>servoctl.c</name>
+    <member refid="servoctl_8c_1ae7a46562f652d66a307a5644f4cd64d5" kind="function"><name>interpolate</name></member>
+  </compound>
+  <compound refid="servoctl_8h" kind="file"><name>servoctl.h</name>
+    <member refid="servoctl_8h_1ae7a46562f652d66a307a5644f4cd64d5" kind="function"><name>interpolate</name></member>
+  </compound>
+  <compound refid="test__matrix_8c" kind="file"><name>test_matrix.c</name>
+    <member refid="test__matrix_8c_1a598a3330b3c21701223ee0ca14316eca" kind="define"><name>PI</name></member>
+    <member refid="test__matrix_8c_1a0f22b2e88e11fe8ed46b427bd67c178e" kind="function"><name>test_matrix_new</name></member>
+    <member refid="test__matrix_8c_1a19198c2ed4c7f6dde90dc28b2fed51f0" kind="function"><name>test_matrix_mul</name></member>
+    <member refid="test__matrix_8c_1ab2d8ced00b7f4878853c5e89bed8c434" kind="function"><name>test_matrix_rol</name></member>
+    <member refid="test__matrix_8c_1aae5be0cae3fb5ac3cb07946fff70a1b5" kind="function"><name>test_matrix_set_col</name></member>
+    <member refid="test__matrix_8c_1a8b972c959cb5ce067be1d27de75a1623" kind="function"><name>test_matrix_printf</name></member>
+    <member refid="test__matrix_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="md_README" kind="page"><name>md_README</name>
+  </compound>
+</doxygenindex>

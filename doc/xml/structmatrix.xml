@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structmatrix" kind="struct" language="C++" prot="public">
+    <compoundname>matrix</compoundname>
+    <includes refid="matrix_8h" local="no">matrix.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmatrix_1a53e53380c64d2dcc85486da7f90794d5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int nrows</definition>
+        <argsstring></argsstring>
+        <name>nrows</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="matrix.h" line="21" column="1" bodyfile="matrix.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmatrix_1a7c4b990ebe8d2c098f3974f6ffe0c9b4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ncols</definition>
+        <argsstring></argsstring>
+        <name>ncols</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="matrix.h" line="21" column="1" bodyfile="matrix.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmatrix_1a18edff6f6f8cc7071adfd9bc826378ef" prot="public" static="no" mutable="no">
+        <type>double *</type>
+        <definition>double* v</definition>
+        <argsstring></argsstring>
+        <name>v</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="matrix.h" line="22" column="1" bodyfile="matrix.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="matrix.h" line="20" column="1" bodyfile="matrix.h" bodystart="20" bodyend="23"/>
+    <listofallmembers>
+      <member refid="structmatrix_1a7c4b990ebe8d2c098f3974f6ffe0c9b4" prot="public" virt="non-virtual"><scope>matrix</scope><name>ncols</name></member>
+      <member refid="structmatrix_1a53e53380c64d2dcc85486da7f90794d5" prot="public" virt="non-virtual"><scope>matrix</scope><name>nrows</name></member>
+      <member refid="structmatrix_1a18edff6f6f8cc7071adfd9bc826378ef" prot="public" virt="non-virtual"><scope>matrix</scope><name>v</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
