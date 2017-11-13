@@ -26,7 +26,10 @@
 
 /**
 Create a new matrix.
-- Must be deleted with matrix_del().
+\arg columns - The number of columns in the matrix
+\arg rows - The number of rows in the matrix.
+\returns A new matric that must be deleted with matrix_del().
+\warning Don't free() instances of #matrix_t. You'll be leaving dangling pointers inside.
 **/
 matrix_t* matrix_new(int columns, int rows)
 {
@@ -46,9 +49,10 @@ matrix_t* matrix_new(int columns, int rows)
 }
 
 /**
-Delete a matrix. 
+Delete a matrix.
+\arg m - The matrix to be deleted 
 - Matrices can be created with other functions than matrix_new().
-- If the called function returns a pointer to a matrix_t, that matrix must be deleted with this destructor function.
+- In general, if the called function returns a pointer to a #matrix_t, that matrix must be deleted with this destructor function.
 **/
 void matrix_del(matrix_t* m)
 {
@@ -60,7 +64,10 @@ void matrix_del(matrix_t* m)
 
 /**
 	Extract a column vector from a matrix.
-	- The result must be deleted with matrix_del().
+	\arg m - The matrix from which to extract the column
+	\arg col_no - The column number to extract. Starts with 0.
+	\returns A new vector of type #matrix_t that must be deleted with matrix_del().
+	
 **/
 matrix_t* matrix_get_col_vector(matrix_t* m, int col_no){
 	int i;
@@ -76,6 +83,9 @@ matrix_t* matrix_get_col_vector(matrix_t* m, int col_no){
 
 /**
 Set the column col_no in m.
+\arg m - The matrix to maniplulate.
+\arg col_no - The column that we wish to set
+\arg ... - The values
 - The argument list must contain one entry for each rown in m.
 - There is no way to check this without cluttering up the code.
 */
@@ -116,6 +126,8 @@ double* matrix_get(matrix_t* m, int col, int row){
 
 /**
 Print the contents of matrix m using format.
+\arg format - Passed on to printf().
+\arg m - The matrix to print.
 - Typically, you'd use "%2.1f " (note the space).
 **/
 void matrix_printf(char* format, matrix_t* m){
@@ -149,7 +161,8 @@ matrix_t* matrix_rol2r(matrix_t* m, double theta){
 /**
 multiply m1 x m2
 - This function is used as a 'workhorse' for kinematic functions.
-- The result must be deleted with matrix_del():
+- The result must be deleted with matrix_del().
+\returns A new matrix that must be deleted with matrix_del().
 **/
 matrix_t* matrix_mul(matrix_t* m1, matrix_t* m2)
 {

@@ -8,9 +8,10 @@
     </detaileddescription>
     <programlisting>
 <codeline><highlight class="normal">&lt;h1&gt;Hello,<sp/>fellow<sp/>robotics<sp/>learners&lt;/h1&gt;</highlight></codeline>
-<codeline><highlight class="normal">For<sp/>those<sp/>of<sp/>us<sp/>who<sp/>are<sp/>on<sp/>a<sp/>budget,<sp/>have<sp/>big<sp/>balls,<sp/>or<sp/>plan<sp/>to<sp/>control<sp/>the<sp/>robot<sp/>from<sp/>an<sp/>embedded<sp/>system<sp/>(or<sp/>any<sp/>combination<sp/>thereof),<sp/>I&apos;ve<sp/>been<sp/>trying<sp/>to<sp/>implement<sp/>some<sp/>of<sp/>the<sp/>MATLAB<sp/>functionality<sp/>in<sp/>C.&lt;br&gt;</highlight></codeline>
-<codeline><highlight class="normal">I&apos;ts<sp/>work<sp/>in<sp/>progress.<sp/>Forward<sp/>and<sp/>reverse<sp/>kinematics<sp/>will<sp/>be<sp/>coming.&lt;br&gt;</highlight></codeline>
-<codeline><highlight class="normal">Feel<sp/>free<sp/>to<sp/>contribute,<sp/>but<sp/>don&apos;t<sp/>touch<sp/>matrix_mul()<sp/>-<sp/>I<sp/>pulled<sp/>my<sp/>hair<sp/>out<sp/>to<sp/>make<sp/>that<sp/>beast<sp/>work.</highlight></codeline>
+<codeline><highlight class="normal">For<sp/>those<sp/>of<sp/>us<sp/>who<sp/>are<sp/>on<sp/>a<sp/>budget,<sp/>have<sp/>brain-sized<sp/>balls<sp/>(or<sp/>ball-sized<sp/>brains,<sp/>depending<sp/>on<sp/>POV),</highlight></codeline>
+<codeline><highlight class="normal">and/or<sp/>plan<sp/>to<sp/>control<sp/>the<sp/>robot<sp/>from<sp/>an<sp/>embedded<sp/>system<sp/>(or<sp/>any<sp/>combination<sp/>thereof),<sp/>I&apos;ve<sp/>been<sp/>trying<sp/>to<sp/>implement<sp/>some<sp/>of<sp/>the<sp/>MATLAB<sp/>functionality<sp/>in<sp/>C.&lt;br&gt;</highlight></codeline>
+<codeline><highlight class="normal">I&apos;ts<sp/>work<sp/>in<sp/>progress,<sp/>dudes.<sp/>Forward<sp/>and<sp/>reverse<sp/>kinematics<sp/>will<sp/>be<sp/>coming<sp/>any<sp/>day<sp/>now.&lt;br&gt;</highlight></codeline>
+<codeline><highlight class="normal">Feel<sp/>free<sp/>to<sp/>contribute,<sp/>but<sp/>don&apos;t<sp/>improve<sp/>matrix_mul()<sp/>unless<sp/>you<sp/>really,<sp/>really,<sp/>really,<sp/>really<sp/>know<sp/>what<sp/>you&apos;re<sp/>doing<sp/>-<sp/>I<sp/>pulled<sp/>my<sp/>hair<sp/>out<sp/>to<sp/>make<sp/>that<sp/>beast<sp/>work.</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">To<sp/>compile,<sp/>type<sp/>make<sp/>at<sp/>the<sp/>$<sp/>prompt&lt;br&gt;</highlight></codeline>
 <codeline><highlight class="normal">$<sp/>make</highlight></codeline>

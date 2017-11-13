@@ -6,8 +6,7 @@
 {\ttfamily \#include $<$assert.\+h$>$}\\*
 {\ttfamily \#include $<$math.\+h$>$}\\*
 {\ttfamily \#include \char`\"{}matrix.\+h\char`\"{}}\\*
-Include dependency graph for matrix.\+c\+:
-\nopagebreak
+Include dependency graph for matrix.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -49,11 +48,13 @@ void \hyperlink{matrix_8c_a57c33c823cc314048ff5ffd206a7fd27}{matrix\+\_\+printf}
 
 Delete a matrix. 
 
-
 \begin{DoxyItemize}
-\item Matrices can be created with other functions than matrix\+\_\+new.
-\item If the called function returns a pointer to a matrix\+\_\+t, that matrix must be deleted with this destructor function. 
-\end{DoxyItemize}\index{matrix.\+c@{matrix.\+c}!matrix\+\_\+get@{matrix\+\_\+get}}
+\item m -\/ The matrix to be deleted
+\begin{DoxyItemize}
+\item Matrices can be created with other functions than \hyperlink{matrix_8c_ada5cab59dea5fc74a2146285abf2e468}{matrix\+\_\+new()}.
+\item In general, if the called function returns a pointer to a \hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t}, that matrix must be deleted with this destructor function. 
+\end{DoxyItemize}\end{DoxyItemize}
+\index{matrix.\+c@{matrix.\+c}!matrix\+\_\+get@{matrix\+\_\+get}}
 \index{matrix\+\_\+get@{matrix\+\_\+get}!matrix.\+c@{matrix.\+c}}
 \subsubsection[{\texorpdfstring{matrix\+\_\+get(matrix\+\_\+t $\ast$m, int col, int row)}{matrix_get(matrix_t *m, int col, int row)}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ matrix\+\_\+get (
 \begin{DoxyParamCaption}
@@ -81,10 +82,12 @@ Return a pointer to the element at col, row in m.
 
 Extract a column vector from a matrix. 
 
-
 \begin{DoxyItemize}
-\item Must be deleted with \hyperlink{matrix_8c_a8277c0c702668ac9c20d5b4fbbb1c805}{matrix\+\_\+del()}. 
-\end{DoxyItemize}\index{matrix.\+c@{matrix.\+c}!matrix\+\_\+mul@{matrix\+\_\+mul}}
+\item m -\/ The matrix from which to extract the column \item col\+\_\+no -\/ The column number to extract. Starts with 0. \begin{DoxyReturn}{Returns}
+A new vector of type \hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} that must be deleted with \hyperlink{matrix_8c_a8277c0c702668ac9c20d5b4fbbb1c805}{matrix\+\_\+del()}. 
+\end{DoxyReturn}
+\end{DoxyItemize}
+\index{matrix.\+c@{matrix.\+c}!matrix\+\_\+mul@{matrix\+\_\+mul}}
 \index{matrix\+\_\+mul@{matrix\+\_\+mul}!matrix.\+c@{matrix.\+c}}
 \subsubsection[{\texorpdfstring{matrix\+\_\+mul(matrix\+\_\+t $\ast$m1, matrix\+\_\+t $\ast$m2)}{matrix_mul(matrix_t *m1, matrix_t *m2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf matrix\+\_\+t}$\ast$ matrix\+\_\+mul (
 \begin{DoxyParamCaption}
@@ -98,7 +101,11 @@ multiply m1 x m2
 
 
 \begin{DoxyItemize}
-\item This function is used as a \textquotesingle{}workhorse\textquotesingle{} for kinematic functions. 
+\item This function is used as a \textquotesingle{}workhorse\textquotesingle{} for kinematic functions.
+\item The result must be deleted with \hyperlink{matrix_8c_a8277c0c702668ac9c20d5b4fbbb1c805}{matrix\+\_\+del()}. \begin{DoxyReturn}{Returns}
+A new matrix that must be deleted with \hyperlink{matrix_8c_a8277c0c702668ac9c20d5b4fbbb1c805}{matrix\+\_\+del()}. 
+\end{DoxyReturn}
+
 \end{DoxyItemize}\index{matrix.\+c@{matrix.\+c}!matrix\+\_\+new@{matrix\+\_\+new}}
 \index{matrix\+\_\+new@{matrix\+\_\+new}!matrix.\+c@{matrix.\+c}}
 \subsubsection[{\texorpdfstring{matrix\+\_\+new(int columns, int rows)}{matrix_new(int columns, int rows)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf matrix\+\_\+t}$\ast$ matrix\+\_\+new (
@@ -111,10 +118,15 @@ multiply m1 x m2
 
 Create a new matrix. 
 
-
 \begin{DoxyItemize}
-\item Must be deleted with \hyperlink{matrix_8c_a8277c0c702668ac9c20d5b4fbbb1c805}{matrix\+\_\+del()}. 
-\end{DoxyItemize}\index{matrix.\+c@{matrix.\+c}!matrix\+\_\+printf@{matrix\+\_\+printf}}
+\item columns -\/ The number of columns in the matrix \item rows -\/ The number of rows in the matrix. \begin{DoxyReturn}{Returns}
+A new matric that must be deleted with \hyperlink{matrix_8c_a8277c0c702668ac9c20d5b4fbbb1c805}{matrix\+\_\+del()}. 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Don\textquotesingle{}t free() instances of \hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t}. You\textquotesingle{}ll be leaving dangling pointers inside. 
+\end{DoxyWarning}
+\end{DoxyItemize}
+\index{matrix.\+c@{matrix.\+c}!matrix\+\_\+printf@{matrix\+\_\+printf}}
 \index{matrix\+\_\+printf@{matrix\+\_\+printf}!matrix.\+c@{matrix.\+c}}
 \subsubsection[{\texorpdfstring{matrix\+\_\+printf(char $\ast$format, matrix\+\_\+t $\ast$m)}{matrix_printf(char *format, matrix_t *m)}}]{\setlength{\rightskip}{0pt plus 5cm}void matrix\+\_\+printf (
 \begin{DoxyParamCaption}
@@ -126,10 +138,12 @@ Create a new matrix.
 
 Print the contents of matrix m using format. 
 
-
+\begin{DoxyItemize}
+\item format -\/ Passed on to printf(). \item m -\/ The matrix to print.
 \begin{DoxyItemize}
 \item Typically, you\textquotesingle{}d use \char`\"{}\%2.\+1f \char`\"{} (note the space). 
-\end{DoxyItemize}\index{matrix.\+c@{matrix.\+c}!matrix\+\_\+rol2r@{matrix\+\_\+rol2r}}
+\end{DoxyItemize}\end{DoxyItemize}
+\index{matrix.\+c@{matrix.\+c}!matrix\+\_\+rol2r@{matrix\+\_\+rol2r}}
 \index{matrix\+\_\+rol2r@{matrix\+\_\+rol2r}!matrix.\+c@{matrix.\+c}}
 \subsubsection[{\texorpdfstring{matrix\+\_\+rol2r(matrix\+\_\+t $\ast$m, double theta)}{matrix_rol2r(matrix_t *m, double theta)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf matrix\+\_\+t}$\ast$ matrix\+\_\+rol2r (
 \begin{DoxyParamCaption}
@@ -141,7 +155,10 @@ Print the contents of matrix m using format.
 
 Rotate a matrix left (anticlockwise) in 2 dmensions using radians. 
 
-\index{matrix.\+c@{matrix.\+c}!matrix\+\_\+set@{matrix\+\_\+set}}
+
+\begin{DoxyItemize}
+\item The result must be deleted with \hyperlink{matrix_8c_a8277c0c702668ac9c20d5b4fbbb1c805}{matrix\+\_\+del()}\+: 
+\end{DoxyItemize}\index{matrix.\+c@{matrix.\+c}!matrix\+\_\+set@{matrix\+\_\+set}}
 \index{matrix\+\_\+set@{matrix\+\_\+set}!matrix.\+c@{matrix.\+c}}
 \subsubsection[{\texorpdfstring{matrix\+\_\+set(matrix\+\_\+t $\ast$m, int col, int row, double d)}{matrix_set(matrix_t *m, int col, int row, double d)}}]{\setlength{\rightskip}{0pt plus 5cm}void matrix\+\_\+set (
 \begin{DoxyParamCaption}
@@ -168,8 +185,9 @@ Set the element at column col and row row in m to d.
 
 Set the column col\+\_\+no in m. 
 
-
+\begin{DoxyItemize}
+\item m -\/ The matrix to maniplulate. \item col\+\_\+no -\/ The column that we wish to set \item ... -\/ The values
 \begin{DoxyItemize}
 \item The argument list must contain one entry for each rown in m.
 \item There is no way to check this without cluttering up the code. 
-\end{DoxyItemize}
+\end{DoxyItemize}\end{DoxyItemize}

@@ -233,8 +233,11 @@ Functions</h2></td></tr>
 
 <p>Delete a matrix. </p>
 <ul>
-<li>Matrices can be created with other functions than matrix_new.</li>
-<li>If the called function returns a pointer to a matrix_t, that matrix must be deleted with this destructor function. </li>
+<li>m - The matrix to be deleted<ul>
+<li>Matrices can be created with other functions than <a class="el" href="matrix_8c.html#ada5cab59dea5fc74a2146285abf2e468" title="Create a new matrix. ">matrix_new()</a>.</li>
+<li>In general, if the called function returns a pointer to a <a class="el" href="matrix_8h.html#a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</a>, that matrix must be deleted with this destructor function. </li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -302,7 +305,9 @@ Functions</h2></td></tr>
 
 <p>Extract a column vector from a matrix. </p>
 <ul>
-<li>Must be deleted with <a class="el" href="matrix_8c.html#a8277c0c702668ac9c20d5b4fbbb1c805" title="Delete a matrix. ">matrix_del()</a>. </li>
+<li>m - The matrix from which to extract the column </li>
+<li>col_no - The column number to extract. Starts with 0. <dl class="section return"><dt>Returns</dt><dd>A new vector of type <a class="el" href="matrix_8h.html#a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</a> that must be deleted with <a class="el" href="matrix_8c.html#a8277c0c702668ac9c20d5b4fbbb1c805" title="Delete a matrix. ">matrix_del()</a>. </dd></dl>
+</li>
 </ul>
 
 </div>
@@ -333,7 +338,9 @@ Functions</h2></td></tr>
 
 <p>multiply m1 x m2 </p>
 <ul>
-<li>This function is used as a 'workhorse' for kinematic functions. </li>
+<li>This function is used as a 'workhorse' for kinematic functions.</li>
+<li>The result must be deleted with <a class="el" href="matrix_8c.html#a8277c0c702668ac9c20d5b4fbbb1c805" title="Delete a matrix. ">matrix_del()</a>. <dl class="section return"><dt>Returns</dt><dd>A new matrix that must be deleted with <a class="el" href="matrix_8c.html#a8277c0c702668ac9c20d5b4fbbb1c805" title="Delete a matrix. ">matrix_del()</a>. </dd></dl>
+</li>
 </ul>
 
 </div>
@@ -364,7 +371,10 @@ Functions</h2></td></tr>
 
 <p>Create a new matrix. </p>
 <ul>
-<li>Must be deleted with <a class="el" href="matrix_8c.html#a8277c0c702668ac9c20d5b4fbbb1c805" title="Delete a matrix. ">matrix_del()</a>. </li>
+<li>columns - The number of columns in the matrix </li>
+<li>rows - The number of rows in the matrix. <dl class="section return"><dt>Returns</dt><dd>A new matric that must be deleted with <a class="el" href="matrix_8c.html#a8277c0c702668ac9c20d5b4fbbb1c805" title="Delete a matrix. ">matrix_del()</a>. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Don't free() instances of <a class="el" href="matrix_8h.html#a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</a>. You'll be leaving dangling pointers inside. </dd></dl>
+</li>
 </ul>
 
 </div>
@@ -395,7 +405,11 @@ Functions</h2></td></tr>
 
 <p>Print the contents of matrix m using format. </p>
 <ul>
+<li>format - Passed on to printf(). </li>
+<li>m - The matrix to print.<ul>
 <li>Typically, you'd use "%2.1f " (note the space). </li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -425,6 +439,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Rotate a matrix left (anticlockwise) in 2 dmensions using radians. </p>
+<ul>
+<li>The result must be deleted with <a class="el" href="matrix_8c.html#a8277c0c702668ac9c20d5b4fbbb1c805" title="Delete a matrix. ">matrix_del()</a>: </li>
+</ul>
 
 </div>
 </div>
@@ -501,8 +518,13 @@ Functions</h2></td></tr>
 
 <p>Set the column col_no in m. </p>
 <ul>
+<li>m - The matrix to maniplulate. </li>
+<li>col_no - The column that we wish to set </li>
+<li>... - The values<ul>
 <li>The argument list must contain one entry for each rown in m.</li>
 <li>There is no way to check this without cluttering up the code. </li>
+</ul>
+</li>
 </ul>
 
 </div>

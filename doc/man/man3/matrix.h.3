@@ -81,10 +81,16 @@ matrix.h \-
 
 .PP
 Delete a matrix\&. 
+.PD 0
+
 .IP "\(bu" 2
-Matrices can be created with other functions than matrix_new\&.
-.IP "\(bu" 2
-If the called function returns a pointer to a matrix_t, that matrix must be deleted with this destructor function\&. 
+m - The matrix to be deleted
+.IP "  \(bu" 4
+Matrices can be created with other functions than \fBmatrix_new()\fP\&.
+.IP "  \(bu" 4
+In general, if the called function returns a pointer to a \fBmatrix_t\fP, that matrix must be deleted with this destructor function\&. 
+.PP
+
 .PP
 
 .SS "double* matrix_get (\fBmatrix_t\fP * m, int col, int row)"
@@ -99,8 +105,19 @@ The array containing this element is maintained by matrix_t, so don't try to del
 
 .PP
 Extract a column vector from a matrix\&. 
+.PD 0
+
 .IP "\(bu" 2
-Must be deleted with \fBmatrix_del()\fP\&. 
+m - The matrix from which to extract the column 
+.IP "\(bu" 2
+col_no - The column number to extract\&. Starts with 0\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A new vector of type \fBmatrix_t\fP that must be deleted with \fBmatrix_del()\fP\&. 
+.RE
+.PP
+
 .PP
 
 .SS "\fBmatrix_t\fP* matrix_mul (\fBmatrix_t\fP * m1, \fBmatrix_t\fP * m2)"
@@ -108,29 +125,66 @@ Must be deleted with \fBmatrix_del()\fP\&.
 .PP
 multiply m1 x m2 
 .IP "\(bu" 2
-This function is used as a 'workhorse' for kinematic functions\&. 
+This function is used as a 'workhorse' for kinematic functions\&.
+.IP "\(bu" 2
+The result must be deleted with \fBmatrix_del()\fP\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A new matrix that must be deleted with \fBmatrix_del()\fP\&. 
+.RE
+.PP
+
 .PP
 
 .SS "\fBmatrix_t\fP* matrix_new (int columns, int rows)"
 
 .PP
 Create a new matrix\&. 
+.PD 0
+
 .IP "\(bu" 2
-Must be deleted with \fBmatrix_del()\fP\&. 
+columns - The number of columns in the matrix 
+.IP "\(bu" 2
+rows - The number of rows in the matrix\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A new matric that must be deleted with \fBmatrix_del()\fP\&. 
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+Don't free() instances of \fBmatrix_t\fP\&. You'll be leaving dangling pointers inside\&. 
+.RE
+.PP
+
 .PP
 
 .SS "void matrix_printf (char * format, \fBmatrix_t\fP * m)"
 
 .PP
 Print the contents of matrix m using format\&. 
+.PD 0
+
 .IP "\(bu" 2
+format - Passed on to printf()\&. 
+.IP "\(bu" 2
+m - The matrix to print\&.
+.IP "  \(bu" 4
 Typically, you'd use '%2\&.1f ' (note the space)\&. 
+.PP
+
 .PP
 
 .SS "\fBmatrix_t\fP* matrix_rol2r (\fBmatrix_t\fP * m, double theta)"
 
 .PP
 Rotate a matrix left (anticlockwise) in 2 dmensions using radians\&. 
+.IP "\(bu" 2
+The result must be deleted with \fBmatrix_del()\fP: 
+.PP
+
 .SS "void matrix_set (\fBmatrix_t\fP * m, int col, int row, double d)"
 
 .PP
@@ -139,10 +193,20 @@ Set the element at column col and row row in m to d\&. -Same as ELM the macro ha
 
 .PP
 Set the column col_no in m\&. 
+.PD 0
+
 .IP "\(bu" 2
+m - The matrix to maniplulate\&. 
+.IP "\(bu" 2
+col_no - The column that we wish to set 
+.IP "\(bu" 2
+\&.\&.\&. - The values
+.IP "  \(bu" 4
 The argument list must contain one entry for each rown in m\&.
-.IP "\(bu" 2
+.IP "  \(bu" 4
 There is no way to check this without cluttering up the code\&. 
+.PP
+
 .PP
 
 .SH "Author"

@@ -5,9 +5,9 @@
     <title>README</title>
     <detaileddescription>
 <para><heading level="1">Hello, fellow robotics learners</heading>
-</para><para>For those of us who are on a budget, have big balls, or plan to control the robot from an embedded system (or any combination thereof), I&apos;ve been trying to implement some of the MATLAB functionality in C.<linebreak/>
- I&apos;ts work in progress. Forward and reverse kinematics will be coming.<linebreak/>
- Feel free to contribute, but don&apos;t touch <ref refid="matrix_8c_1a1e8d8c0421f716763d5bbb5c39af0e5b" kindref="member">matrix_mul()</ref> - I pulled my hair out to make that beast work.</para><para>To compile, type make at the $ prompt<linebreak/>
+</para><para>For those of us who are on a budget, have brain-sized balls (or ball-sized brains, depending on POV), and/or plan to control the robot from an embedded system (or any combination thereof), I&apos;ve been trying to implement some of the MATLAB functionality in C.<linebreak/>
+ I&apos;ts work in progress, dudes. Forward and reverse kinematics will be coming any day now.<linebreak/>
+ Feel free to contribute, but don&apos;t improve <ref refid="matrix_8c_1a1e8d8c0421f716763d5bbb5c39af0e5b" kindref="member">matrix_mul()</ref> unless you really, really, really, really know what you&apos;re doing - I pulled my hair out to make that beast work.</para><para>To compile, type make at the $ prompt<linebreak/>
  $ make </para>    </detaileddescription>
   </compounddef>
 </doxygen>
