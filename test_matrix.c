@@ -27,7 +27,11 @@
 
 void test_matrix_new(){
 	matrix_t* m = matrix_new(3,3);
+	printf("\n----------------- Create:-----------\n");
+	assert(m);
+	assert(m->v);
 	matrix_printf("%f ", m);
+	printf("**** PASSED!\n");
 	matrix_del(m);
 }
 
@@ -36,7 +40,7 @@ void test_matrix_mul()
 	matrix_t* m = matrix_new(3,3);
 	matrix_t* m2 = matrix_new(1,3);
 	matrix_t* m3;
-	
+	printf("\n----------------- Multiply -----------\n");
 	printf("\n----------------- 3x1:-----------\n");	
 	matrix_set_col(m,0, 1.0, 2.0, 3.0);
 	matrix_set_col(m,1, 4.0, 5.0, 6.0);
@@ -52,6 +56,10 @@ void test_matrix_mul()
 	matrix_printf("%2.0f ", m3);
 	
 	// TODO Assert postcondition
+	assert(ELM(m3, 0,0)==30);
+	assert(ELM(m3, 0,1)==36);
+	assert(ELM(m3, 0,2)==42);
+	printf("**** PASSED!\n");
 	
 	matrix_del(m2);
 	matrix_del(m3);
@@ -106,19 +114,24 @@ void test_matrix_rol()
 	printf("\n");
 	m2 = matrix_rol2r(m, (30*PI)/180);
 	matrix_printf("%2.3f", m2);
+	// TODO Assert postcondition
+	
 	matrix_del(m);
 	matrix_del(m2);
-	// TODO Assert postcondition
 }
 
 void test_matrix_set_col()
 {
 	matrix_t* m = matrix_new(3,3);
-	
+	printf("\n----------------- set_col :-----------\n");
 	matrix_set_col(m, 1, 1.0, 2.0, 3.0);
 	matrix_printf("%1.0f ", m);
 	
 	// TODO Assert postcondition
+	assert(ELM(m, 1,0)==1.0);
+	assert(ELM(m, 1,1)==2.0);
+	assert(ELM(m, 1,2)==3.0);
+	printf("**** PASSED!\n");
 	
 	matrix_del(m);
 }
