@@ -30,3 +30,4 @@ matrix_t* matrix_mul(matrix_t* m1, matrix_t* m2);
 void matrix_set(matrix_t* m, int col, int row, double v);
 double* matrix_get(matrix_t* m, int col, int row);
 void matrix_printf(char* format, matrix_t* m);
+matrix_t* matrix_rol2r(matrix_t* m, double theta);

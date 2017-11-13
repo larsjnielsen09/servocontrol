@@ -6,7 +6,7 @@ CFLAGS = -g -Wall
 OBJECTS = servocontrol.o servoctl.o matrix.o
 INCFLAGS = /usr/include
 LDFLAGS = -Wl,-rpath,/usr/local/lib
-LIBS = 
+LIBS = -lm
 
 all: servocontrol test_matrix
 

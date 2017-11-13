@@ -21,6 +21,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <assert.h>
+#include <math.h>
 #include "matrix.h"
 
 #define ELM(m, col, row) (m->v[(m->ncols*row)+col])
@@ -110,8 +111,17 @@ void matrix_printf(char* format, matrix_t* m){
 	}
 }
 
-void matrix_rol(matrix_t* m, double theta){
+matrix_t* matrix_rol2r(matrix_t* m, double theta){
+	matrix_t* rv;
+	matrix_t* rm; // Return value, rotation matrix
+	rm = matrix_new(2,2);
+	matrix_set_col(rm, 0, cos(theta), -sin(theta));
+	matrix_set_col(rm, 1, sin(theta), cos(theta));
+	rv = matrix_mul(rm, m);
+	matrix_del(rm);
+	return rv;
 }
+
 
 
 matrix_t* matrix_mul(matrix_t* m1, matrix_t* m2)

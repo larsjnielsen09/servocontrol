@@ -21,6 +21,9 @@
 #include <stdlib.h>
 #include "matrix.h"
 
+#define PI 3.141592654
+// TODO assert post-conditions (tedious, manual work, but necessary)
+
 void test_matrix_new(){
 	matrix_t* m = matrix_new(3,3);
 	matrix_printf("%f ", m);
@@ -47,6 +50,8 @@ void test_matrix_mul()
 	m3 = matrix_mul(m, m2);
 	matrix_printf("%2.0f ", m3);
 	
+	// TODO Assert postcondition
+	
 	matrix_del(m2);
 	matrix_del(m3);
 
@@ -65,6 +70,7 @@ void test_matrix_mul()
 	m3 = matrix_mul(m, m2);
 	matrix_printf("%2.0f ", m3);
 
+// TODO Assert postcondition
 	
 	matrix_del(m2);
 	matrix_del(m3);
@@ -73,8 +79,20 @@ void test_matrix_mul()
 
 }
 
-void test_matrix_col()
+void test_matrix_rol()
 {
+	matrix_t* m = matrix_new(1,2);
+	matrix_t* m2;
+	printf("\n----------------- Rotate 30 deg:-----------\n");
+	
+	matrix_set_col(m, 0, 4.0, 5.0);
+	matrix_printf("%2.0f ", m);
+	printf("\n");
+	m2 = matrix_rol2r(m, (30*PI)/180);
+	matrix_printf("%2.3f", m2);
+	matrix_del(m);
+	matrix_del(m2);
+	// TODO Assert postcondition
 }
 
 void test_matrix_set_col()
@@ -83,6 +101,9 @@ void test_matrix_set_col()
 	
 	matrix_set_col(m, 1, 1.0, 2.0, 3.0);
 	matrix_printf("%1.0f ", m);
+	
+	// TODO Assert postcondition
+	
 	matrix_del(m);
 }
 
@@ -95,4 +116,5 @@ int main()
 	test_matrix_new();
 	test_matrix_set_col();
 	test_matrix_mul();
+	test_matrix_rol();
 }
