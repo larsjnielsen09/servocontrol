@@ -24,7 +24,6 @@
 #include <math.h>
 #include "matrix.h"
 
-#define ELM(m, col, row) (m->v[(m->ncols*row)+col])
 
 matrix_t* matrix_new(int columns, int rows)
 {

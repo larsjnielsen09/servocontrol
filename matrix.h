@@ -22,6 +22,8 @@ typedef struct matrix {
 	double *v;
 } matrix_t;
 
+#define ELM(m, col, row) (m->v[(m->ncols*row)+col])
+
 matrix_t* matrix_new(int columns, int rows);
 void matrix_del(matrix_t* m);
 matrix_t* matrix_get_col_vector(matrix_t* m, int col_no);

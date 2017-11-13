@@ -19,6 +19,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <assert.h>
 #include "matrix.h"
 
 #define PI 3.141592654
@@ -71,6 +72,21 @@ void test_matrix_mul()
 	matrix_printf("%2.0f ", m3);
 
 // TODO Assert postcondition
+/*
+	30    66   102
+    36    81   126
+    42    96   150*/
+
+	assert(ELM(m3, 0,0)==30);
+	assert(ELM(m3, 1,0)==66);
+	assert(ELM(m3, 2,0)==102);
+	assert(ELM(m3, 0,1)==36);
+	assert(ELM(m3, 1,1)==81);
+	assert(ELM(m3, 2,1)==126);
+	assert(ELM(m3, 0,2)==42);
+	assert(ELM(m3, 1,2)==96);
+	assert(ELM(m3, 2,2)==150);
+	printf("**** PASSED!\n");
 	
 	matrix_del(m2);
 	matrix_del(m3);
