@@ -5,4 +5,45 @@ For those of us who are on a budget, have brain-\/sized balls (or ball-\/sized b
  Feel free to contribute, but don\textquotesingle{}t improve \hyperlink{matrix_8c_a1e8d8c0421f716763d5bbb5c39af0e5b}{matrix\+\_\+mul()} unless you really, really, really, really know what you\textquotesingle{}re doing -\/ I pulled my hair out to make that beast work.
 
 To compile, type make at the \$ prompt~\newline
- \$ make 
+ \$ make
+
+\subsection*{matrix}
+
+\hyperlink{matrix_8c}{matrix.\+c} contains enough maxtric operations to get through the course, and then adding whatever is necessary to get a Chinese 6\+D\+OF robot arm working with Tower\+Pro M\+G996R servos. The low-\/level stuff will be in \hyperlink{servoctl_8c}{servoctl.\+c}.
+
+To use the matrix operations, include \hyperlink{matrix_8h}{matrix.\+h}. {\ttfamily  \#include \char`\"{}matrix.\+h\char`\"{}}
+
+{\ttfamily /$\ast$ Let\textquotesingle{}s multiply two matrices, m x m2 and store the product in m3 $\ast$/}
+
+{\ttfamily /$\ast$ 1. Declare the three matrices you\textquotesingle{}ll be using. $\ast$/ \begin{DoxyVerb}matrix_t* m = matrix_new(3,3); /* Create a 3x3 matrix */
+matrix_t* m2 = matrix_new(1,3);/* Create a 1x3 matrix */
+matrix_t* m3;
+\end{DoxyVerb}
+}
+
+{\ttfamily /$\ast$ 2. Put some values in m and m2 $\ast$/ \begin{DoxyVerb}matrix_set_col(m,0, 1.0, 2.0, 3.0);
+matrix_set_col(m,1, 4.0, 5.0, 6.0);
+matrix_set_col(m,2, 7.0, 8.0, 9.0);
+
+matrix_set_col(m2,0, 1.0, 2.0, 3.0);
+
+/* Print it */
+matrix_printf("%2.0f ", m);
+printf("*\n");
+matrix_printf("%2.0f ", m2);
+printf("=\n");
+\end{DoxyVerb}
+}
+
+{\ttfamily /$\ast$ 3. Multiply them and print the result $\ast$/ \begin{DoxyVerb}m3 = matrix_mul(m, m2);
+matrix_printf("%2.0f ", m3);
+\end{DoxyVerb}
+}
+
+{\ttfamily /$\ast$ 4. Clean up, and you\textquotesingle{}re done. $\ast$/ matrix\+\_\+del(m2); matrix\+\_\+del(m3);}
+
+{\ttfamily  matrix\+\_\+del(m); }
+
+\subsection*{Servoctl}
+
+Contains low-\/level routines for dealing with servos and the Adafruit servo controller. 

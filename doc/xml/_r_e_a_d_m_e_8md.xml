@@ -15,6 +15,53 @@
 <codeline></codeline>
 <codeline><highlight class="normal">To<sp/>compile,<sp/>type<sp/>make<sp/>at<sp/>the<sp/>$<sp/>prompt&lt;br&gt;</highlight></codeline>
 <codeline><highlight class="normal">$<sp/>make</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;h2&gt;matrix&lt;/h2&gt;</highlight></codeline>
+<codeline><highlight class="normal">matrix.c<sp/>contains<sp/>enough<sp/>maxtric<sp/>operations<sp/>to<sp/>get<sp/>through<sp/>the<sp/>course,<sp/>and<sp/>then<sp/>adding<sp/>whatever<sp/>is<sp/>necessary<sp/>to<sp/>get<sp/>a<sp/>Chinese<sp/>6DOF<sp/>robot<sp/>arm<sp/>working<sp/>with<sp/>TowerPro<sp/>MG996R<sp/>servos.</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>low-level<sp/>stuff<sp/>will<sp/>be<sp/>in<sp/>servoctl.c.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>use<sp/>the<sp/>matrix<sp/>operations,<sp/>include<sp/>matrix.h.</highlight></codeline>
+<codeline><highlight class="normal">&lt;code&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;matrix.h&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>Let&apos;s<sp/>multiply<sp/>two<sp/>matrices,<sp/>m<sp/>x<sp/>m2<sp/>and<sp/>store<sp/>the<sp/>product<sp/>in<sp/>m3<sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>1.<sp/>Declare<sp/>the<sp/>three<sp/>matrices<sp/>you&apos;ll<sp/>be<sp/>using.<sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>matrix_t*<sp/>m<sp/>=<sp/>matrix_new(3,3);<sp/>/*<sp/>Create<sp/>a<sp/>3x3<sp/>matrix<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>matrix_t*<sp/>m2<sp/>=<sp/>matrix_new(1,3);/*<sp/>Create<sp/>a<sp/>1x3<sp/>matrix<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>matrix_t*<sp/>m3;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>2.<sp/>Put<sp/>some<sp/>values<sp/>in<sp/>m<sp/>and<sp/>m2<sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>matrix_set_col(m,0,<sp/>1.0,<sp/>2.0,<sp/>3.0);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>matrix_set_col(m,1,<sp/>4.0,<sp/>5.0,<sp/>6.0);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>matrix_set_col(m,2,<sp/>7.0,<sp/>8.0,<sp/>9.0);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>matrix_set_col(m2,0,<sp/>1.0,<sp/>2.0,<sp/>3.0);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>/*<sp/>Print<sp/>it<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>matrix_printf(&quot;%2.0f<sp/>&quot;,<sp/>m);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>printf(&quot;*\n&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>matrix_printf(&quot;%2.0f<sp/>&quot;,<sp/>m2);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>printf(&quot;=\n&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">/*<sp/>3.<sp/>Multiply<sp/>them<sp/>and<sp/>print<sp/>the<sp/>result<sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>m3<sp/>=<sp/>matrix_mul(m,<sp/>m2);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>matrix_printf(&quot;%2.0f<sp/>&quot;,<sp/>m3);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>4.<sp/>Clean<sp/>up,<sp/>and<sp/>you&apos;re<sp/>done.<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>matrix_del(m2);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>matrix_del(m3);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>matrix_del(m);</highlight></codeline>
+<codeline><highlight class="normal">&lt;/code&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;h2&gt;Servoctl&lt;/h2&gt;</highlight></codeline>
+<codeline><highlight class="normal">Contains<sp/>low-level<sp/>routines<sp/>for<sp/>dealing<sp/>with<sp/>servos<sp/>and<sp/>the<sp/>Adafruit<sp/>servo<sp/>controller.</highlight></codeline>
     </programlisting>
     <location file="README.md"/>
   </compounddef>

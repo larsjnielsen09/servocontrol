@@ -16,6 +16,46 @@
 <para>To compile, type make at the $ prompt
 <literallayout>
 </literallayout>
- $ make </para>
+ $ make</para>
+
+<para><formalpara><title>matrix</title></formalpara>
+</para>
+
+<para><link linkend="matrix_8c">matrix.c</link> contains enough maxtric operations to get through the course, and then adding whatever is necessary to get a Chinese 6DOF robot arm working with TowerPro MG996R servos. The low-level stuff will be in <link linkend="servoctl_8c">servoctl.c</link>.</para>
+
+<para>To use the matrix operations, include <link linkend="matrix_8h">matrix.h</link>. <computeroutput> #include &quot;matrix.h&quot;</computeroutput></para>
+
+<para><computeroutput>/* Let&apos;s multiply two matrices, m x m2 and store the product in m3 */</computeroutput></para>
+
+<para><computeroutput>/* 1. Declare the three matrices you&apos;ll be using. */ <literallayout>matrix_t* m = matrix_new(3,3); /* Create a 3x3 matrix */
+matrix_t* m2 = matrix_new(1,3);/* Create a 1x3 matrix */
+matrix_t* m3;
+</literallayout></computeroutput></para>
+
+<para><computeroutput>/* 2. Put some values in m and m2 */ <literallayout>matrix_set_col(m,0, 1.0, 2.0, 3.0);
+matrix_set_col(m,1, 4.0, 5.0, 6.0);
+matrix_set_col(m,2, 7.0, 8.0, 9.0);
+
+matrix_set_col(m2,0, 1.0, 2.0, 3.0);
+
+/* Print it */
+matrix_printf(&quot;%2.0f &quot;, m);
+printf(&quot;*\n&quot;);
+matrix_printf(&quot;%2.0f &quot;, m2);
+printf(&quot;=\n&quot;);
+</literallayout></computeroutput></para>
+
+<para><computeroutput>/* 3. Multiply them and print the result */ <literallayout>m3 = matrix_mul(m, m2);
+matrix_printf(&quot;%2.0f &quot;, m3);
+</literallayout></computeroutput></para>
+
+<para><computeroutput>/* 4. Clean up, and you&apos;re done. */ matrix_del(m2); matrix_del(m3);</computeroutput></para>
+
+<para><computeroutput> matrix_del(m); </computeroutput></para>
+
+<para><formalpara><title>Servoctl</title></formalpara>
+</para>
+
+<para>Contains low-level routines for dealing with servos and the Adafruit servo controller. </para>
 
 </chapter>

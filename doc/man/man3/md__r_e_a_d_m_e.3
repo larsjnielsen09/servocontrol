@@ -1,4 +1,4 @@
-.TH "md__r_e_a_d_m_e" 3 "Mon Nov 13 2017" "Servocontrol" \" -*- nroff -*-
+.TH "md__r_e_a_d_m_e" 3 "Tue Nov 14 2017" "Servocontrol" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,4 +15,60 @@ For those of us who are on a budget, have brain-sized balls (or ball-sized brain
 .PP
 To compile, type make at the $ prompt
 .br
- $ make 
+ $ make
+.PP
+.SS "matrix"
+.PP
+\fBmatrix\&.c\fP contains enough maxtric operations to get through the course, and then adding whatever is necessary to get a Chinese 6DOF robot arm working with TowerPro MG996R servos\&. The low-level stuff will be in \fBservoctl\&.c\fP\&.
+.PP
+To use the matrix operations, include \fBmatrix\&.h\fP\&. \fC #include 'matrix\&.h'\fP
+.PP
+\fC/* Let's multiply two matrices, m x m2 and store the product in m3 */\fP
+.PP
+\fC/* 1\&. Declare the three matrices you'll be using\&. */ 
+.PP
+.nf
+matrix_t* m = matrix_new(3,3); /* Create a 3x3 matrix */
+matrix_t* m2 = matrix_new(1,3);/* Create a 1x3 matrix */
+matrix_t* m3;
+
+.fi
+.PP
+\fP
+.PP
+\fC/* 2\&. Put some values in m and m2 */ 
+.PP
+.nf
+matrix_set_col(m,0, 1.0, 2.0, 3.0);
+matrix_set_col(m,1, 4.0, 5.0, 6.0);
+matrix_set_col(m,2, 7.0, 8.0, 9.0);
+
+matrix_set_col(m2,0, 1.0, 2.0, 3.0);
+
+/* Print it */
+matrix_printf("%2.0f ", m);
+printf("*\n");
+matrix_printf("%2.0f ", m2);
+printf("=\n");
+
+.fi
+.PP
+\fP
+.PP
+\fC/* 3\&. Multiply them and print the result */ 
+.PP
+.nf
+m3 = matrix_mul(m, m2);
+matrix_printf("%2.0f ", m3);
+
+.fi
+.PP
+\fP
+.PP
+\fC/* 4\&. Clean up, and you're done\&. */ matrix_del(m2); matrix_del(m3);\fP
+.PP
+\fC matrix_del(m); \fP
+.PP
+.SS "Servoctl"
+.PP
+Contains low-level routines for dealing with servos and the Adafruit servo controller\&. 
