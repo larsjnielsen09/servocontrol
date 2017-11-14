@@ -8,14 +8,17 @@ To compile, type make at the $ prompt<br>
 $ make
 
 <h2>matrix</h2>
-matrix.c contains enough maxtric operations to get through the course, and then adding whatever is necessary to get a Chinese 6DOF robot arm working with TowerPro MG996R servos.
-The low-level stuff will be in servoctl.c.
+matrix.c contains enough maxtrix operations to get through the course, 
+then adding whatever is necessary to get a Chinese 6DOF robot arm working with TowerPro MG996R servos.<br>
+The low-level stuff will be in servoctl.c.<br>
 
-To use the matrix operations, include matrix.h.
+To use the matrix operations, include matrix.h.<br>
+
 <code>
-#include "matrix.h"
 
 /* Let's multiply two matrices, m x m2 and store the product in m3 */
+#include "matrix.h"
+
 
 /* 1. Declare the three matrices you'll be using. */
 
