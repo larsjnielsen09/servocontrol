@@ -153,8 +153,8 @@ matrix_t* matrix_rot_x(matrix_t* m, double theta){
 	matrix_t* rm; // Return value, rotation matrix
 	rm = matrix_new(3,3);
 	matrix_set_col(rm, 0, 1.0, 0.0, 0.0);
-	matrix_set_col(rm, 1, 0.0, cos(theta), -sin(theta));
-	matrix_set_col(rm, 2, 0.0, sin(theta), cos(theta));
+	matrix_set_col(rm, 1, 0.0, cos(theta), sin(theta));
+	matrix_set_col(rm, 2, 0.0, -sin(theta), cos(theta));
 	rv = matrix_mul(rm, m);
 	matrix_del(rm);
 	return rv;
