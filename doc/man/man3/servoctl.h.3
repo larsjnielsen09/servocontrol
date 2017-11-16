@@ -1,4 +1,4 @@
-.TH "servoctl.h" 3 "Tue Nov 14 2017" "Servocontrol" \" -*- nroff -*-
+.TH "servoctl.h" 3 "Thu Nov 16 2017" "Servocontrol" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -6,16 +6,39 @@ servoctl.h \-
 .SH SYNOPSIS
 .br
 .PP
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBlinkage\fP"
+.br
+.in -1c
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "double * \fBinterpolate\fP (double p0, double p1, int numsteps)"
+.RI "struct \fBlinkage\fP \fBinterpolate\fP (double p0, double p1, int numsteps)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBbase_x\fP"
+.br
+.ti -1c
+.RI "\fBbase_y\fP"
 .br
 .in -1c
 .SH "Function Documentation"
 .PP 
-.SS "double* interpolate (double p0, double p1, int numsteps)"
+.SS "struct \fBlinkage\fP interpolate (double p0, double p1, int numsteps)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "base_x"
+
+.SS "base_y"
 
 .SH "Author"
 .PP 

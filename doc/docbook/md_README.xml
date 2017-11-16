@@ -21,11 +21,22 @@
 <para><formalpara><title>matrix</title></formalpara>
 </para>
 
-<para><link linkend="matrix_8c">matrix.c</link> contains enough maxtric operations to get through the course, and then adding whatever is necessary to get a Chinese 6DOF robot arm working with TowerPro MG996R servos. The low-level stuff will be in <link linkend="servoctl_8c">servoctl.c</link>.</para>
+<para><link linkend="matrix_8c">matrix.c</link> contains enough maxtrix operations to get through the course, then adding whatever is necessary to get a Chinese 6DOF robot arm working with TowerPro MG996R servos.
+<literallayout>
+</literallayout>
+ The low-level stuff will be in <link linkend="servoctl_8c">servoctl.c</link>.
+<literallayout>
+</literallayout>
+</para>
 
-<para>To use the matrix operations, include <link linkend="matrix_8h">matrix.h</link>. <computeroutput> #include &quot;matrix.h&quot;</computeroutput></para>
+<para>To use the matrix operations, include <link linkend="matrix_8h">matrix.h</link>.
+<literallayout>
+</literallayout>
+</para>
 
-<para><computeroutput>/* Let&apos;s multiply two matrices, m x m2 and store the product in m3 */</computeroutput></para>
+<para><computeroutput></computeroutput></para>
+
+<para><computeroutput>/* Let&apos;s multiply two matrices, m x m2 and store the product in m3 */ #include &quot;matrix.h&quot;</computeroutput></para>
 
 <para><computeroutput>/* 1. Declare the three matrices you&apos;ll be using. */ <literallayout>matrix_t* m = matrix_new(3,3); /* Create a 3x3 matrix */
 matrix_t* m2 = matrix_new(1,3);/* Create a 1x3 matrix */

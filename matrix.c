@@ -24,6 +24,7 @@
 #include <math.h>
 #include "matrix.h"
 
+
 /**
 Create a new matrix.
 \arg columns - The number of columns in the matrix

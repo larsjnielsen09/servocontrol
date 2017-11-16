@@ -131,8 +131,7 @@ char * format, <link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matr
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * <link linkend="matrix_8h_1af1e14df979d46d4f11464f83f4e6ee22">matrix_rol2r</link> (
-<link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * m, double theta)<para><emphasis>Rotate a matrix left (anticlockwise) in 2 dmensions using radians.</emphasis></para>
-</para>
+<link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * m, double theta)</para>
                     </listitem>
                 </itemizedlist>
             </para>

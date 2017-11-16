@@ -1,4 +1,4 @@
-.TH "matrix.c" 3 "Tue Nov 14 2017" "Servocontrol" \" -*- nroff -*-
+.TH "matrix.c" 3 "Thu Nov 16 2017" "Servocontrol" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -51,9 +51,17 @@ matrix.c \-
 .br
 .RI "\fIPrint the contents of matrix m using format\&. \fP"
 .ti -1c
-.RI "\fBmatrix_t\fP * \fBmatrix_rol2r\fP (\fBmatrix_t\fP *m, double theta)"
+.RI "\fBmatrix_t\fP * \fBmatrix_rot_x\fP (\fBmatrix_t\fP *m, double theta)"
 .br
-.RI "\fIRotate a matrix left (anticlockwise) in 2 dmensions using radians\&. \fP"
+.RI "\fIRotate a matrix around x-axis\&. \fP"
+.ti -1c
+.RI "\fBmatrix_t\fP * \fBmatrix_rot_y\fP (\fBmatrix_t\fP *m, double theta)"
+.br
+.RI "\fIRotate a matrix around y-axis\&. \fP"
+.ti -1c
+.RI "\fBmatrix_t\fP * \fBmatrix_rot_z\fP (\fBmatrix_t\fP *m, double theta)"
+.br
+.RI "\fIRotate a matrix around z-axis\&. \fP"
 .ti -1c
 .RI "\fBmatrix_t\fP * \fBmatrix_mul\fP (\fBmatrix_t\fP *m1, \fBmatrix_t\fP *m2)"
 .br
@@ -161,10 +169,32 @@ Typically, you'd use '%2\&.1f ' (note the space)\&.
 
 .PP
 
-.SS "\fBmatrix_t\fP* matrix_rol2r (\fBmatrix_t\fP * m, double theta)"
+.SS "\fBmatrix_t\fP* matrix_rot_x (\fBmatrix_t\fP * m, double theta)"
 
 .PP
-Rotate a matrix left (anticlockwise) in 2 dmensions using radians\&. 
+Rotate a matrix around x-axis\&. 
+.PP
+\fBBug\fP
+.RS 4
+Create x,y,z static rotation matrices to avoid alloc/free
+.IP "\(bu" 2
+The result must be deleted with \fBmatrix_del()\fP 
+.PP
+.RE
+.PP
+
+.SS "\fBmatrix_t\fP* matrix_rot_y (\fBmatrix_t\fP * m, double theta)"
+
+.PP
+Rotate a matrix around y-axis\&. 
+.IP "\(bu" 2
+The result must be deleted with \fBmatrix_del()\fP: 
+.PP
+
+.SS "\fBmatrix_t\fP* matrix_rot_z (\fBmatrix_t\fP * m, double theta)"
+
+.PP
+Rotate a matrix around z-axis\&. 
 .IP "\(bu" 2
 The result must be deleted with \fBmatrix_del()\fP: 
 .PP

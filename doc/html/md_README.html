@@ -109,9 +109,13 @@ $(document).ready(function(){initNavTree('md_README.html','');});
 <p>To compile, type make at the $ prompt<br />
  $ make</p>
 <h2>matrix</h2>
-<p><a class="el" href="matrix_8c.html">matrix.c</a> contains enough maxtric operations to get through the course, and then adding whatever is necessary to get a Chinese 6DOF robot arm working with TowerPro MG996R servos. The low-level stuff will be in <a class="el" href="servoctl_8c.html">servoctl.c</a>.</p>
-<p>To use the matrix operations, include <a class="el" href="matrix_8h.html">matrix.h</a>. <code> #include "matrix.h"</code></p>
-<p><code>/* Let's multiply two matrices, m x m2 and store the product in m3 */</code></p>
+<p><a class="el" href="matrix_8c.html">matrix.c</a> contains enough maxtrix operations to get through the course, then adding whatever is necessary to get a Chinese 6DOF robot arm working with TowerPro MG996R servos.<br />
+ The low-level stuff will be in <a class="el" href="servoctl_8c.html">servoctl.c</a>.<br />
+</p>
+<p>To use the matrix operations, include <a class="el" href="matrix_8h.html">matrix.h</a>.<br />
+</p>
+<p><code></code></p>
+<p><code>/* Let's multiply two matrices, m x m2 and store the product in m3 */ #include "matrix.h"</code></p>
 <p><code>/* 1. Declare the three matrices you'll be using. */ </p><pre class="fragment">matrix_t* m = matrix_new(3,3); /* Create a 3x3 matrix */
 matrix_t* m2 = matrix_new(1,3);/* Create a 1x3 matrix */
 matrix_t* m3;

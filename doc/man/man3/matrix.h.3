@@ -1,4 +1,4 @@
-.TH "matrix.h" 3 "Tue Nov 14 2017" "Servocontrol" \" -*- nroff -*-
+.TH "matrix.h" 3 "Thu Nov 16 2017" "Servocontrol" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -65,7 +65,6 @@ matrix.h \-
 .ti -1c
 .RI "\fBmatrix_t\fP * \fBmatrix_rol2r\fP (\fBmatrix_t\fP *m, double theta)"
 .br
-.RI "\fIRotate a matrix left (anticlockwise) in 2 dmensions using radians\&. \fP"
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
@@ -178,12 +177,6 @@ Typically, you'd use '%2\&.1f ' (note the space)\&.
 .PP
 
 .SS "\fBmatrix_t\fP* matrix_rol2r (\fBmatrix_t\fP * m, double theta)"
-
-.PP
-Rotate a matrix left (anticlockwise) in 2 dmensions using radians\&. 
-.IP "\(bu" 2
-The result must be deleted with \fBmatrix_del()\fP: 
-.PP
 
 .SS "void matrix_set (\fBmatrix_t\fP * m, int col, int row, double d)"
 

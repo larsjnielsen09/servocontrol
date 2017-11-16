@@ -9,7 +9,10 @@
  I&apos;ts work in progress, dudes. Forward and reverse kinematics will be coming any day now.<linebreak/>
  Feel free to contribute, but don&apos;t improve <ref refid="matrix_8c_1a1e8d8c0421f716763d5bbb5c39af0e5b" kindref="member">matrix_mul()</ref> unless you really, really, really, really know what you&apos;re doing - I pulled my hair out to make that beast work.</para><para>To compile, type make at the $ prompt<linebreak/>
  $ make</para><para><heading level="2">matrix</heading>
-</para><para><ref refid="matrix_8c" kindref="compound">matrix.c</ref> contains enough maxtric operations to get through the course, and then adding whatever is necessary to get a Chinese 6DOF robot arm working with TowerPro MG996R servos. The low-level stuff will be in <ref refid="servoctl_8c" kindref="compound">servoctl.c</ref>.</para><para>To use the matrix operations, include <ref refid="matrix_8h" kindref="compound">matrix.h</ref>. <computeroutput> #include &quot;matrix.h&quot;</computeroutput></para><para><computeroutput>/* Let&apos;s multiply two matrices, m x m2 and store the product in m3 */</computeroutput></para><para><computeroutput>/* 1. Declare the three matrices you&apos;ll be using. */ <verbatim>matrix_t* m = matrix_new(3,3); /* Create a 3x3 matrix */
+</para><para><ref refid="matrix_8c" kindref="compound">matrix.c</ref> contains enough maxtrix operations to get through the course, then adding whatever is necessary to get a Chinese 6DOF robot arm working with TowerPro MG996R servos.<linebreak/>
+ The low-level stuff will be in <ref refid="servoctl_8c" kindref="compound">servoctl.c</ref>.<linebreak/>
+</para><para>To use the matrix operations, include <ref refid="matrix_8h" kindref="compound">matrix.h</ref>.<linebreak/>
+</para><para><computeroutput></computeroutput></para><para><computeroutput>/* Let&apos;s multiply two matrices, m x m2 and store the product in m3 */ #include &quot;matrix.h&quot;</computeroutput></para><para><computeroutput>/* 1. Declare the three matrices you&apos;ll be using. */ <verbatim>matrix_t* m = matrix_new(3,3); /* Create a 3x3 matrix */
 matrix_t* m2 = matrix_new(1,3);/* Create a 1x3 matrix */
 matrix_t* m3;
 </verbatim></computeroutput></para><para><computeroutput>/* 2. Put some values in m and m2 */ <verbatim>matrix_set_col(m,0, 1.0, 2.0, 3.0);

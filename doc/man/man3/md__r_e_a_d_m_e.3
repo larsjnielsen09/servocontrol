@@ -1,4 +1,4 @@
-.TH "md__r_e_a_d_m_e" 3 "Tue Nov 14 2017" "Servocontrol" \" -*- nroff -*-
+.TH "md__r_e_a_d_m_e" 3 "Thu Nov 16 2017" "Servocontrol" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -19,11 +19,17 @@ To compile, type make at the $ prompt
 .PP
 .SS "matrix"
 .PP
-\fBmatrix\&.c\fP contains enough maxtric operations to get through the course, and then adding whatever is necessary to get a Chinese 6DOF robot arm working with TowerPro MG996R servos\&. The low-level stuff will be in \fBservoctl\&.c\fP\&.
+\fBmatrix\&.c\fP contains enough maxtrix operations to get through the course, then adding whatever is necessary to get a Chinese 6DOF robot arm working with TowerPro MG996R servos\&.
+.br
+ The low-level stuff will be in \fBservoctl\&.c\fP\&.
+.br
 .PP
-To use the matrix operations, include \fBmatrix\&.h\fP\&. \fC #include 'matrix\&.h'\fP
+To use the matrix operations, include \fBmatrix\&.h\fP\&.
+.br
 .PP
-\fC/* Let's multiply two matrices, m x m2 and store the product in m3 */\fP
+\fC\fP
+.PP
+\fC/* Let's multiply two matrices, m x m2 and store the product in m3 */ #include 'matrix\&.h'\fP
 .PP
 \fC/* 1\&. Declare the three matrices you'll be using\&. */ 
 .PP

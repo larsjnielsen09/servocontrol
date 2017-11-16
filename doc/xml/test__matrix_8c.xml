@@ -84,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="test_matrix.c" line="106" column="1" bodyfile="test_matrix.c" bodystart="106" bodyend="121"/>
+        <location file="test_matrix.c" line="106" column="1" bodyfile="test_matrix.c" bodystart="106" bodyend="108"/>
       </memberdef>
       <memberdef kind="function" id="test__matrix_8c_1aae5be0cae3fb5ac3cb07946fff70a1b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="test_matrix.c" line="123" column="1" bodyfile="test_matrix.c" bodystart="123" bodyend="137"/>
+        <location file="test_matrix.c" line="110" column="1" bodyfile="test_matrix.c" bodystart="110" bodyend="124"/>
       </memberdef>
       <memberdef kind="function" id="test__matrix_8c_1a8b972c959cb5ce067be1d27de75a1623" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -110,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="test_matrix.c" line="139" column="1" bodyfile="test_matrix.c" bodystart="139" bodyend="141"/>
+        <location file="test_matrix.c" line="126" column="1" bodyfile="test_matrix.c" bodystart="126" bodyend="128"/>
       </memberdef>
       <memberdef kind="function" id="test__matrix_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -123,7 +123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="test_matrix.c" line="143" column="1" bodyfile="test_matrix.c" bodystart="143" bodyend="149"/>
+        <location file="test_matrix.c" line="130" column="1" bodyfile="test_matrix.c" bodystart="130" bodyend="136"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -238,48 +238,35 @@
 <codeline lineno="105"><highlight class="normal"></highlight></codeline>
 <codeline lineno="106"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="test__matrix_8c_1ab2d8ced00b7f4878853c5e89bed8c434" kindref="member">test_matrix_rol</ref>()</highlight></codeline>
 <codeline lineno="107"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmatrix" kindref="compound">matrix_t</ref>*<sp/>m<sp/>=<sp/><ref refid="matrix_8c_1ada5cab59dea5fc74a2146285abf2e468" kindref="member">matrix_new</ref>(1,2);</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmatrix" kindref="compound">matrix_t</ref>*<sp/>m2;</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n-----------------<sp/>Rotate<sp/>30<sp/>deg:-----------\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="matrix_8c_1a2bf3c116d7c23979b805934c18d9d3fd" kindref="member">matrix_set_col</ref>(m,<sp/>0,<sp/>4.0,<sp/>5.0);</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="matrix_8c_1a57c33c823cc314048ff5ffd206a7fd27" kindref="member">matrix_printf</ref>(</highlight><highlight class="stringliteral">&quot;%2.0f<sp/>&quot;</highlight><highlight class="normal">,<sp/>m);</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>m2<sp/>=<sp/><ref refid="matrix_8c_1af1e14df979d46d4f11464f83f4e6ee22" kindref="member">matrix_rol2r</ref>(m,<sp/>(30*<ref refid="test__matrix_8c_1a598a3330b3c21701223ee0ca14316eca" kindref="member">PI</ref>)/180);</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="matrix_8c_1a57c33c823cc314048ff5ffd206a7fd27" kindref="member">matrix_printf</ref>(</highlight><highlight class="stringliteral">&quot;%2.3f&quot;</highlight><highlight class="normal">,<sp/>m2);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="test__matrix_8c_1aae5be0cae3fb5ac3cb07946fff70a1b5" kindref="member">test_matrix_set_col</ref>()</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmatrix" kindref="compound">matrix_t</ref>*<sp/>m<sp/>=<sp/><ref refid="matrix_8c_1ada5cab59dea5fc74a2146285abf2e468" kindref="member">matrix_new</ref>(3,3);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n-----------------<sp/>set_col<sp/>:-----------\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="matrix_8c_1a2bf3c116d7c23979b805934c18d9d3fd" kindref="member">matrix_set_col</ref>(m,<sp/>1,<sp/>1.0,<sp/>2.0,<sp/>3.0);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="matrix_8c_1a57c33c823cc314048ff5ffd206a7fd27" kindref="member">matrix_printf</ref>(</highlight><highlight class="stringliteral">&quot;%1.0f<sp/>&quot;</highlight><highlight class="normal">,<sp/>m);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Assert<sp/>postcondition</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="matrix_8c_1a8277c0c702668ac9c20d5b4fbbb1c805" kindref="member">matrix_del</ref>(m);</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="matrix_8c_1a8277c0c702668ac9c20d5b4fbbb1c805" kindref="member">matrix_del</ref>(m2);</highlight></codeline>
-<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"></highlight></codeline>
-<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="test__matrix_8c_1aae5be0cae3fb5ac3cb07946fff70a1b5" kindref="member">test_matrix_set_col</ref>()</highlight></codeline>
-<codeline lineno="124"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmatrix" kindref="compound">matrix_t</ref>*<sp/>m<sp/>=<sp/><ref refid="matrix_8c_1ada5cab59dea5fc74a2146285abf2e468" kindref="member">matrix_new</ref>(3,3);</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n-----------------<sp/>set_col<sp/>:-----------\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="matrix_8c_1a2bf3c116d7c23979b805934c18d9d3fd" kindref="member">matrix_set_col</ref>(m,<sp/>1,<sp/>1.0,<sp/>2.0,<sp/>3.0);</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="matrix_8c_1a57c33c823cc314048ff5ffd206a7fd27" kindref="member">matrix_printf</ref>(</highlight><highlight class="stringliteral">&quot;%1.0f<sp/>&quot;</highlight><highlight class="normal">,<sp/>m);</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Assert<sp/>postcondition</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="matrix_8h_1aaf4919968b31b42a399d749719bbe126" kindref="member">ELM</ref>(m,<sp/>1,0)==1.0);</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="matrix_8h_1aaf4919968b31b42a399d749719bbe126" kindref="member">ELM</ref>(m,<sp/>1,1)==2.0);</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="matrix_8h_1aaf4919968b31b42a399d749719bbe126" kindref="member">ELM</ref>(m,<sp/>1,2)==3.0);</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;****<sp/>PASSED!\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="matrix_8c_1a8277c0c702668ac9c20d5b4fbbb1c805" kindref="member">matrix_del</ref>(m);</highlight></codeline>
-<codeline lineno="137"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"></highlight></codeline>
-<codeline lineno="139"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="test__matrix_8c_1a8b972c959cb5ce067be1d27de75a1623" kindref="member">test_matrix_printf</ref>()</highlight></codeline>
-<codeline lineno="140"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"></highlight></codeline>
-<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="test__matrix_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()</highlight></codeline>
-<codeline lineno="144"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="test__matrix_8c_1a0f22b2e88e11fe8ed46b427bd67c178e" kindref="member">test_matrix_new</ref>();</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="test__matrix_8c_1aae5be0cae3fb5ac3cb07946fff70a1b5" kindref="member">test_matrix_set_col</ref>();</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="test__matrix_8c_1a19198c2ed4c7f6dde90dc28b2fed51f0" kindref="member">test_matrix_mul</ref>();</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="test__matrix_8c_1ab2d8ced00b7f4878853c5e89bed8c434" kindref="member">test_matrix_rol</ref>();</highlight></codeline>
-<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="matrix_8h_1aaf4919968b31b42a399d749719bbe126" kindref="member">ELM</ref>(m,<sp/>1,0)==1.0);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="matrix_8h_1aaf4919968b31b42a399d749719bbe126" kindref="member">ELM</ref>(m,<sp/>1,1)==2.0);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="matrix_8h_1aaf4919968b31b42a399d749719bbe126" kindref="member">ELM</ref>(m,<sp/>1,2)==3.0);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;****<sp/>PASSED!\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="matrix_8c_1a8277c0c702668ac9c20d5b4fbbb1c805" kindref="member">matrix_del</ref>(m);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="test__matrix_8c_1a8b972c959cb5ce067be1d27de75a1623" kindref="member">test_matrix_printf</ref>()</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="test__matrix_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="test__matrix_8c_1a0f22b2e88e11fe8ed46b427bd67c178e" kindref="member">test_matrix_new</ref>();</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="test__matrix_8c_1aae5be0cae3fb5ac3cb07946fff70a1b5" kindref="member">test_matrix_set_col</ref>();</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="test__matrix_8c_1a19198c2ed4c7f6dde90dc28b2fed51f0" kindref="member">test_matrix_mul</ref>();</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="test__matrix_8c_1ab2d8ced00b7f4878853c5e89bed8c434" kindref="member">test_matrix_rol</ref>();</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="test_matrix.c"/>
   </compounddef>

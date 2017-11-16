@@ -80,7 +80,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="matrix.h" line="27" column="1" bodyfile="matrix.c" bodystart="34" bodyend="49"/>
+        <location file="matrix.h" line="27" column="1" bodyfile="matrix.c" bodystart="35" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="matrix_8h_1a8277c0c702668ac9c20d5b4fbbb1c805" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -102,7 +102,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="matrix.h" line="28" column="1" bodyfile="matrix.c" bodystart="57" bodyend="63"/>
+        <location file="matrix.h" line="28" column="1" bodyfile="matrix.c" bodystart="58" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="matrix_8h_1a734238400aafc2b5dbc5cd3d56cd9d60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f" kindref="member">matrix_t</ref> *</type>
@@ -128,7 +128,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="matrix.h" line="29" column="1" bodyfile="matrix.c" bodystart="72" bodyend="82"/>
+        <location file="matrix.h" line="29" column="1" bodyfile="matrix.c" bodystart="73" bodyend="83"/>
       </memberdef>
       <memberdef kind="function" id="matrix_8h_1a2bf3c116d7c23979b805934c18d9d3fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -159,7 +159,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="matrix.h" line="30" column="1" bodyfile="matrix.c" bodystart="92" bodyend="104"/>
+        <location file="matrix.h" line="30" column="1" bodyfile="matrix.c" bodystart="93" bodyend="105"/>
       </memberdef>
       <memberdef kind="function" id="matrix_8h_1a1e8d8c0421f716763d5bbb5c39af0e5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f" kindref="member">matrix_t</ref> *</type>
@@ -183,7 +183,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="matrix.h" line="31" column="1" bodyfile="matrix.c" bodystart="167" bodyend="193"/>
+        <location file="matrix.h" line="31" column="1" bodyfile="matrix.c" bodystart="203" bodyend="229"/>
       </memberdef>
       <memberdef kind="function" id="matrix_8h_1a6e2e142638d18a26b372e1fe1ad719f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -213,7 +213,7 @@
 <para>-Same as ELM the macro hack, but a lot safer. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="matrix.h" line="32" column="1" bodyfile="matrix.c" bodystart="110" bodyend="114"/>
+        <location file="matrix.h" line="32" column="1" bodyfile="matrix.c" bodystart="111" bodyend="115"/>
       </memberdef>
       <memberdef kind="function" id="matrix_8h_1ae6a0f841c360812a20dd2f43a7be3d9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double *</type>
@@ -240,7 +240,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="matrix.h" line="33" column="1" bodyfile="matrix.c" bodystart="120" bodyend="124"/>
+        <location file="matrix.h" line="33" column="1" bodyfile="matrix.c" bodystart="121" bodyend="125"/>
       </memberdef>
       <memberdef kind="function" id="matrix_8h_1a57c33c823cc314048ff5ffd206a7fd27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -267,7 +267,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="matrix.h" line="34" column="1" bodyfile="matrix.c" bodystart="133" bodyend="143"/>
+        <location file="matrix.h" line="34" column="1" bodyfile="matrix.c" bodystart="134" bodyend="144"/>
       </memberdef>
       <memberdef kind="function" id="matrix_8h_1af1e14df979d46d4f11464f83f4e6ee22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f" kindref="member">matrix_t</ref> *</type>
@@ -283,14 +283,12 @@
           <declname>theta</declname>
         </param>
         <briefdescription>
-<para>Rotate a matrix left (anticlockwise) in 2 dmensions using radians. </para>        </briefdescription>
+        </briefdescription>
         <detaileddescription>
-<para><itemizedlist>
-<listitem><para>The result must be deleted with <ref refid="matrix_8c_1a8277c0c702668ac9c20d5b4fbbb1c805" kindref="member">matrix_del()</ref>: </para></listitem></itemizedlist>
-</para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="matrix.h" line="35" column="1" bodyfile="matrix.c" bodystart="149" bodyend="158"/>
+        <location file="matrix.h" line="35" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

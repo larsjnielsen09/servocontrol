@@ -97,8 +97,26 @@ char * format, <link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matr
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para><link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * <link linkend="matrix_8c_1af1e14df979d46d4f11464f83f4e6ee22">matrix_rol2r</link> (
-<link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * m, double theta)<para><emphasis>Rotate a matrix left (anticlockwise) in 2 dmensions using radians.</emphasis></para>
+                        <para><link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * <link linkend="matrix_8c_1a2e2541f2040177403b95e30f38b232fe">matrix_rot_x</link> (
+<link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * m, double theta)<para><emphasis>Rotate a matrix around x-axis.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * <link linkend="matrix_8c_1a46cb2680dc432e6ca1f23642d26afd6c">matrix_rot_y</link> (
+<link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * m, double theta)<para><emphasis>Rotate a matrix around y-axis.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * <link linkend="matrix_8c_1ae56ed57fcad52b8a9d4cabe736331e06">matrix_rot_z</link> (
+<link linkend="matrix_8h_1a423f7a3e32c1f6d72e65d605ea5e6f5f">matrix_t</link> * m, double theta)<para><emphasis>Rotate a matrix around z-axis.</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>

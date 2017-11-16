@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['matrix',['matrix',['../structmatrix.html',1,'']]]
+  ['linkage',['linkage',['../structlinkage.html',1,'']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ncols',['ncols',['../structmatrix.html#a7c4b990ebe8d2c098f3974f6ffe0c9b4',1,'matrix']]],
-  ['nrows',['nrows',['../structmatrix.html#a53e53380c64d2dcc85486da7f90794d5',1,'matrix']]]
+  ['base_5fx',['base_x',['../structlinkage.html#ab7212a9ff1ec58211f1b689374f11766',1,'linkage::base_x()'],['../servoctl_8h.html#ab7212a9ff1ec58211f1b689374f11766',1,'base_x():&#160;servoctl.h']]],
+  ['base_5fy',['base_y',['../structlinkage.html#aed760843bedfbb6de7f205758ef0d49b',1,'linkage::base_y()'],['../servoctl_8h.html#aed760843bedfbb6de7f205758ef0d49b',1,'base_y():&#160;servoctl.h']]]
 ];

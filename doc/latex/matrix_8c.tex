@@ -30,8 +30,12 @@ double $\ast$ \hyperlink{matrix_8c_ae6a0f841c360812a20dd2f43a7be3d9e}{matrix\+\_
 \begin{DoxyCompactList}\small\item\em Return a pointer to the element at col, row in m. \end{DoxyCompactList}\item 
 void \hyperlink{matrix_8c_a57c33c823cc314048ff5ffd206a7fd27}{matrix\+\_\+printf} (char $\ast$format, \hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$m)
 \begin{DoxyCompactList}\small\item\em Print the contents of matrix m using format. \end{DoxyCompactList}\item 
-\hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$ \hyperlink{matrix_8c_af1e14df979d46d4f11464f83f4e6ee22}{matrix\+\_\+rol2r} (\hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$m, double theta)
-\begin{DoxyCompactList}\small\item\em Rotate a matrix left (anticlockwise) in 2 dmensions using radians. \end{DoxyCompactList}\item 
+\hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$ \hyperlink{matrix_8c_a2e2541f2040177403b95e30f38b232fe}{matrix\+\_\+rot\+\_\+x} (\hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$m, double theta)
+\begin{DoxyCompactList}\small\item\em Rotate a matrix around x-\/axis. \end{DoxyCompactList}\item 
+\hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$ \hyperlink{matrix_8c_a46cb2680dc432e6ca1f23642d26afd6c}{matrix\+\_\+rot\+\_\+y} (\hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$m, double theta)
+\begin{DoxyCompactList}\small\item\em Rotate a matrix around y-\/axis. \end{DoxyCompactList}\item 
+\hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$ \hyperlink{matrix_8c_ae56ed57fcad52b8a9d4cabe736331e06}{matrix\+\_\+rot\+\_\+z} (\hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$m, double theta)
+\begin{DoxyCompactList}\small\item\em Rotate a matrix around z-\/axis. \end{DoxyCompactList}\item 
 \hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$ \hyperlink{matrix_8c_a1e8d8c0421f716763d5bbb5c39af0e5b}{matrix\+\_\+mul} (\hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$m1, \hyperlink{matrix_8h_a423f7a3e32c1f6d72e65d605ea5e6f5f}{matrix\+\_\+t} $\ast$m2)
 \begin{DoxyCompactList}\small\item\em multiply m1 x m2 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -143,17 +147,49 @@ Print the contents of matrix m using format.
 \begin{DoxyItemize}
 \item Typically, you\textquotesingle{}d use \char`\"{}\%2.\+1f \char`\"{} (note the space). 
 \end{DoxyItemize}\end{DoxyItemize}
-\index{matrix.\+c@{matrix.\+c}!matrix\+\_\+rol2r@{matrix\+\_\+rol2r}}
-\index{matrix\+\_\+rol2r@{matrix\+\_\+rol2r}!matrix.\+c@{matrix.\+c}}
-\subsubsection[{\texorpdfstring{matrix\+\_\+rol2r(matrix\+\_\+t $\ast$m, double theta)}{matrix_rol2r(matrix_t *m, double theta)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf matrix\+\_\+t}$\ast$ matrix\+\_\+rol2r (
+\index{matrix.\+c@{matrix.\+c}!matrix\+\_\+rot\+\_\+x@{matrix\+\_\+rot\+\_\+x}}
+\index{matrix\+\_\+rot\+\_\+x@{matrix\+\_\+rot\+\_\+x}!matrix.\+c@{matrix.\+c}}
+\subsubsection[{\texorpdfstring{matrix\+\_\+rot\+\_\+x(matrix\+\_\+t $\ast$m, double theta)}{matrix_rot_x(matrix_t *m, double theta)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf matrix\+\_\+t}$\ast$ matrix\+\_\+rot\+\_\+x (
 \begin{DoxyParamCaption}
 \item[{{\bf matrix\+\_\+t} $\ast$}]{m, }
 \item[{double}]{theta}
 \end{DoxyParamCaption}
-)}\hypertarget{matrix_8c_af1e14df979d46d4f11464f83f4e6ee22}{}\label{matrix_8c_af1e14df979d46d4f11464f83f4e6ee22}
+)}\hypertarget{matrix_8c_a2e2541f2040177403b95e30f38b232fe}{}\label{matrix_8c_a2e2541f2040177403b95e30f38b232fe}
 
 
-Rotate a matrix left (anticlockwise) in 2 dmensions using radians. 
+Rotate a matrix around x-\/axis. 
+
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000001}{Bug}]Create x,y,z static rotation matrices to avoid alloc/free
+\begin{DoxyItemize}
+\item The result must be deleted with \hyperlink{matrix_8c_a8277c0c702668ac9c20d5b4fbbb1c805}{matrix\+\_\+del()} 
+\end{DoxyItemize}\end{DoxyRefDesc}
+\index{matrix.\+c@{matrix.\+c}!matrix\+\_\+rot\+\_\+y@{matrix\+\_\+rot\+\_\+y}}
+\index{matrix\+\_\+rot\+\_\+y@{matrix\+\_\+rot\+\_\+y}!matrix.\+c@{matrix.\+c}}
+\subsubsection[{\texorpdfstring{matrix\+\_\+rot\+\_\+y(matrix\+\_\+t $\ast$m, double theta)}{matrix_rot_y(matrix_t *m, double theta)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf matrix\+\_\+t}$\ast$ matrix\+\_\+rot\+\_\+y (
+\begin{DoxyParamCaption}
+\item[{{\bf matrix\+\_\+t} $\ast$}]{m, }
+\item[{double}]{theta}
+\end{DoxyParamCaption}
+)}\hypertarget{matrix_8c_a46cb2680dc432e6ca1f23642d26afd6c}{}\label{matrix_8c_a46cb2680dc432e6ca1f23642d26afd6c}
+
+
+Rotate a matrix around y-\/axis. 
+
+
+\begin{DoxyItemize}
+\item The result must be deleted with \hyperlink{matrix_8c_a8277c0c702668ac9c20d5b4fbbb1c805}{matrix\+\_\+del()}\+: 
+\end{DoxyItemize}\index{matrix.\+c@{matrix.\+c}!matrix\+\_\+rot\+\_\+z@{matrix\+\_\+rot\+\_\+z}}
+\index{matrix\+\_\+rot\+\_\+z@{matrix\+\_\+rot\+\_\+z}!matrix.\+c@{matrix.\+c}}
+\subsubsection[{\texorpdfstring{matrix\+\_\+rot\+\_\+z(matrix\+\_\+t $\ast$m, double theta)}{matrix_rot_z(matrix_t *m, double theta)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf matrix\+\_\+t}$\ast$ matrix\+\_\+rot\+\_\+z (
+\begin{DoxyParamCaption}
+\item[{{\bf matrix\+\_\+t} $\ast$}]{m, }
+\item[{double}]{theta}
+\end{DoxyParamCaption}
+)}\hypertarget{matrix_8c_ae56ed57fcad52b8a9d4cabe736331e06}{}\label{matrix_8c_ae56ed57fcad52b8a9d4cabe736331e06}
+
+
+Rotate a matrix around z-\/axis. 
 
 
 \begin{DoxyItemize}

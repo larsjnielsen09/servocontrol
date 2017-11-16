@@ -4,8 +4,10 @@
     <title>Servocontrol</title>
     </info>
         <xi:include href="md_README.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="bug.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <chapter>
         <title>Data Structure Documentation</title>
+        <xi:include href="structlinkage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
         <xi:include href="structmatrix.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     </chapter>
     <chapter>

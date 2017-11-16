@@ -9,11 +9,16 @@ To compile, type make at the \$ prompt~\newline
 
 \subsection*{matrix}
 
-\hyperlink{matrix_8c}{matrix.\+c} contains enough maxtric operations to get through the course, and then adding whatever is necessary to get a Chinese 6\+D\+OF robot arm working with Tower\+Pro M\+G996R servos. The low-\/level stuff will be in \hyperlink{servoctl_8c}{servoctl.\+c}.
+\hyperlink{matrix_8c}{matrix.\+c} contains enough maxtrix operations to get through the course, then adding whatever is necessary to get a Chinese 6\+D\+OF robot arm working with Tower\+Pro M\+G996R servos.~\newline
+ The low-\/level stuff will be in \hyperlink{servoctl_8c}{servoctl.\+c}.~\newline
 
-To use the matrix operations, include \hyperlink{matrix_8h}{matrix.\+h}. {\ttfamily  \#include \char`\"{}matrix.\+h\char`\"{}}
 
-{\ttfamily /$\ast$ Let\textquotesingle{}s multiply two matrices, m x m2 and store the product in m3 $\ast$/}
+To use the matrix operations, include \hyperlink{matrix_8h}{matrix.\+h}.~\newline
+
+
+{\ttfamily }
+
+{\ttfamily /$\ast$ Let\textquotesingle{}s multiply two matrices, m x m2 and store the product in m3 $\ast$/ \#include \char`\"{}matrix.\+h\char`\"{}}
 
 {\ttfamily /$\ast$ 1. Declare the three matrices you\textquotesingle{}ll be using. $\ast$/ \begin{DoxyVerb}matrix_t* m = matrix_new(3,3); /* Create a 3x3 matrix */
 matrix_t* m2 = matrix_new(1,3);/* Create a 1x3 matrix */

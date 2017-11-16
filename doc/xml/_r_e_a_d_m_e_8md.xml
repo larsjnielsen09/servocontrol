@@ -17,14 +17,17 @@
 <codeline><highlight class="normal">$<sp/>make</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">&lt;h2&gt;matrix&lt;/h2&gt;</highlight></codeline>
-<codeline><highlight class="normal">matrix.c<sp/>contains<sp/>enough<sp/>maxtric<sp/>operations<sp/>to<sp/>get<sp/>through<sp/>the<sp/>course,<sp/>and<sp/>then<sp/>adding<sp/>whatever<sp/>is<sp/>necessary<sp/>to<sp/>get<sp/>a<sp/>Chinese<sp/>6DOF<sp/>robot<sp/>arm<sp/>working<sp/>with<sp/>TowerPro<sp/>MG996R<sp/>servos.</highlight></codeline>
-<codeline><highlight class="normal">The<sp/>low-level<sp/>stuff<sp/>will<sp/>be<sp/>in<sp/>servoctl.c.</highlight></codeline>
+<codeline><highlight class="normal">matrix.c<sp/>contains<sp/>enough<sp/>maxtrix<sp/>operations<sp/>to<sp/>get<sp/>through<sp/>the<sp/>course,<sp/></highlight></codeline>
+<codeline><highlight class="normal">then<sp/>adding<sp/>whatever<sp/>is<sp/>necessary<sp/>to<sp/>get<sp/>a<sp/>Chinese<sp/>6DOF<sp/>robot<sp/>arm<sp/>working<sp/>with<sp/>TowerPro<sp/>MG996R<sp/>servos.&lt;br&gt;</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>low-level<sp/>stuff<sp/>will<sp/>be<sp/>in<sp/>servoctl.c.&lt;br&gt;</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">To<sp/>use<sp/>the<sp/>matrix<sp/>operations,<sp/>include<sp/>matrix.h.</highlight></codeline>
+<codeline><highlight class="normal">To<sp/>use<sp/>the<sp/>matrix<sp/>operations,<sp/>include<sp/>matrix.h.&lt;br&gt;</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">&lt;code&gt;</highlight></codeline>
-<codeline><highlight class="normal">#include<sp/>&quot;matrix.h&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">/*<sp/>Let&apos;s<sp/>multiply<sp/>two<sp/>matrices,<sp/>m<sp/>x<sp/>m2<sp/>and<sp/>store<sp/>the<sp/>product<sp/>in<sp/>m3<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;matrix.h&quot;</highlight></codeline>
+<codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">/*<sp/>1.<sp/>Declare<sp/>the<sp/>three<sp/>matrices<sp/>you&apos;ll<sp/>be<sp/>using.<sp/>*/</highlight></codeline>
 <codeline></codeline>

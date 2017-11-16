@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.11">
+  <compound refid="structlinkage" kind="struct"><name>linkage</name>
+    <member refid="structlinkage_1ab7212a9ff1ec58211f1b689374f11766" kind="variable"><name>base_x</name></member>
+    <member refid="structlinkage_1aed760843bedfbb6de7f205758ef0d49b" kind="variable"><name>base_y</name></member>
+  </compound>
   <compound refid="structmatrix" kind="struct"><name>matrix</name>
     <member refid="structmatrix_1a53e53380c64d2dcc85486da7f90794d5" kind="variable"><name>nrows</name></member>
     <member refid="structmatrix_1a7c4b990ebe8d2c098f3974f6ffe0c9b4" kind="variable"><name>ncols</name></member>
@@ -16,7 +20,9 @@
     <member refid="matrix_8c_1a066269f1cf8e31cee35781be055b541f" kind="function"><name>matrix_set</name></member>
     <member refid="matrix_8c_1ae6a0f841c360812a20dd2f43a7be3d9e" kind="function"><name>matrix_get</name></member>
     <member refid="matrix_8c_1a57c33c823cc314048ff5ffd206a7fd27" kind="function"><name>matrix_printf</name></member>
-    <member refid="matrix_8c_1af1e14df979d46d4f11464f83f4e6ee22" kind="function"><name>matrix_rol2r</name></member>
+    <member refid="matrix_8c_1a2e2541f2040177403b95e30f38b232fe" kind="function"><name>matrix_rot_x</name></member>
+    <member refid="matrix_8c_1a46cb2680dc432e6ca1f23642d26afd6c" kind="function"><name>matrix_rot_y</name></member>
+    <member refid="matrix_8c_1ae56ed57fcad52b8a9d4cabe736331e06" kind="function"><name>matrix_rot_z</name></member>
     <member refid="matrix_8c_1a1e8d8c0421f716763d5bbb5c39af0e5b" kind="function"><name>matrix_mul</name></member>
   </compound>
   <compound refid="matrix_8h" kind="file"><name>matrix.h</name>
@@ -41,7 +47,9 @@
     <member refid="servoctl_8c_1ae7a46562f652d66a307a5644f4cd64d5" kind="function"><name>interpolate</name></member>
   </compound>
   <compound refid="servoctl_8h" kind="file"><name>servoctl.h</name>
-    <member refid="servoctl_8h_1ae7a46562f652d66a307a5644f4cd64d5" kind="function"><name>interpolate</name></member>
+    <member refid="servoctl_8h_1ab7212a9ff1ec58211f1b689374f11766" kind="variable"><name>base_x</name></member>
+    <member refid="servoctl_8h_1aed760843bedfbb6de7f205758ef0d49b" kind="variable"><name>base_y</name></member>
+    <member refid="servoctl_8h_1a8403506ff6bd138fd1aab7707e31870d" kind="function"><name>interpolate</name></member>
   </compound>
   <compound refid="test__matrix_8c" kind="file"><name>test_matrix.c</name>
     <member refid="test__matrix_8c_1a598a3330b3c21701223ee0ca14316eca" kind="define"><name>PI</name></member>
@@ -53,5 +61,7 @@
     <member refid="test__matrix_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
   </compound>
   <compound refid="md_README" kind="page"><name>md_README</name>
+  </compound>
+  <compound refid="bug" kind="page"><name>bug</name>
   </compound>
 </doxygenindex>
