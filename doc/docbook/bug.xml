@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Bug List</title>
+
+<para><variablelist>
+<varlistentry><term><anchor id="bug_1_bug000001"/>Global <link linkend="matrix_8c_1a2e2541f2040177403b95e30f38b232fe">matrix_rot_x</link>  (matrix_t *m, double theta)</term>
+<listitem>
+<para>Create x,y,z static rotation matrices to avoid alloc/free<itemizedlist>
+<listitem>
+<para>The result must be deleted with <link linkend="matrix_8c_1a8277c0c702668ac9c20d5b4fbbb1c805">matrix_del()</link> </para>
+</listitem></itemizedlist>
+</para>
+</listitem></varlistentry>
+</variablelist>
+</para>
+
+</chapter>

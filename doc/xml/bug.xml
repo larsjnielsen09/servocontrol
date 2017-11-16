@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="bug" kind="page">
+    <compoundname>bug</compoundname>
+    <title>Bug List</title>
+    <detaileddescription>
+<para><variablelist>
+<varlistentry><term><anchor id="bug_1_bug000001"/>Global <ref refid="matrix_8c_1a2e2541f2040177403b95e30f38b232fe" kindref="member">matrix_rot_x</ref>  (matrix_t *m, double theta)</term></varlistentry>
+<listitem><para>Create x,y,z static rotation matrices to avoid alloc/free<itemizedlist>
+<listitem><para>The result must be deleted with <ref refid="matrix_8c_1a8277c0c702668ac9c20d5b4fbbb1c805" kindref="member">matrix_del()</ref> </para></listitem></itemizedlist>
+</para></listitem>
+</variablelist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

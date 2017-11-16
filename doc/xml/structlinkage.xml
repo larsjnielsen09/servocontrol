@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structlinkage" kind="struct" language="C++" prot="public">
+    <compoundname>linkage</compoundname>
+    <includes refid="servoctl_8h" local="no">servoctl.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlinkage_1ab7212a9ff1ec58211f1b689374f11766" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>base_x</definition>
+        <argsstring></argsstring>
+        <name>base_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="servoctl.h" line="2" column="1" bodyfile="servoctl.h" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlinkage_1aed760843bedfbb6de7f205758ef0d49b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>base_y</definition>
+        <argsstring></argsstring>
+        <name>base_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="servoctl.h" line="3" column="1" bodyfile="servoctl.h" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="servoctl.h" line="1" column="1" bodyfile="servoctl.h" bodystart="1" bodyend="5"/>
+    <listofallmembers>
+      <member refid="structlinkage_1ab7212a9ff1ec58211f1b689374f11766" prot="public" virt="non-virtual"><scope>linkage</scope><name>base_x</name></member>
+      <member refid="structlinkage_1aed760843bedfbb6de7f205758ef0d49b" prot="public" virt="non-virtual"><scope>linkage</scope><name>base_y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
