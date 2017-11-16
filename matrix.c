@@ -143,15 +143,50 @@ void matrix_printf(char* format, matrix_t* m){
 }
 
 /**
-Rotate a matrix left (anticlockwise) in 2 dmensions using radians.
-- The result must be deleted with matrix_del():
+Rotate a matrix around x-axis
+\bug Create x,y,z static rotation matrices to avoid alloc/free 
+- The result must be deleted with matrix_del()
 **/
-matrix_t* matrix_rol2r(matrix_t* m, double theta){
+matrix_t* matrix_rot_x(matrix_t* m, double theta){
 	matrix_t* rv;
 	matrix_t* rm; // Return value, rotation matrix
-	rm = matrix_new(2,2);
-	matrix_set_col(rm, 0, cos(theta), -sin(theta));
-	matrix_set_col(rm, 1, sin(theta), cos(theta));
+	rm = matrix_new(3,3);
+	matrix_set_col(rm, 0, 1.0, 0.0, 0.0);
+	matrix_set_col(rm, 1, 0.0, cos(theta), -sin(theta));
+	matrix_set_col(rm, 2, 0.0, sin(theta), cos(theta));
+	rv = matrix_mul(rm, m);
+	matrix_del(rm);
+	return rv;
+}
+
+
+/**
+Rotate a matrix around y-axis
+- The result must be deleted with matrix_del():
+**/
+matrix_t* matrix_rot_y(matrix_t* m, double theta){
+	matrix_t* rv;
+	matrix_t* rm; // Return value, rotation matrix
+	rm = matrix_new(3,3);
+	matrix_set_col(rm, 0, cos(theta), 0.0, -sin(theta));
+	matrix_set_col(rm, 1, 0.0, 1.0, 0.0);
+	matrix_set_col(rm, 2, sin(theta), 0.0, cos(theta));
+	rv = matrix_mul(rm, m);
+	matrix_del(rm);
+	return rv;
+}
+
+/**
+Rotate a matrix around z-axis
+- The result must be deleted with matrix_del():
+**/
+matrix_t* matrix_rot_z(matrix_t* m, double theta){
+	matrix_t* rv;
+	matrix_t* rm; // Return value, rotation matrix
+	rm = matrix_new(3,3);
+	matrix_set_col(rm, 0, cos(theta), sin(theta), 0.0);
+	matrix_set_col(rm, 1, -sin(theta), cos(theta), 0.0);
+	matrix_set_col(rm, 2, 0.0, 0.0, 1.0);
 	rv = matrix_mul(rm, m);
 	matrix_del(rm);
 	return rv;
