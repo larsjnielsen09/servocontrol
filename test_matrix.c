@@ -105,19 +105,6 @@ void test_matrix_mul()
 
 void test_matrix_rol()
 {
-	matrix_t* m = matrix_new(1,2);
-	matrix_t* m2;
-	printf("\n----------------- Rotate 30 deg:-----------\n");
-	
-	matrix_set_col(m, 0, 4.0, 5.0);
-	matrix_printf("%2.0f ", m);
-	printf("\n");
-	m2 = matrix_rol2r(m, (30*PI)/180);
-	matrix_printf("%2.3f", m2);
-	// TODO Assert postcondition
-	
-	matrix_del(m);
-	matrix_del(m2);
 }
 
 void test_matrix_set_col()
